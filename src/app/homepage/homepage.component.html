@@ -1,0 +1,10 @@
+<h3>Trending</h3>
+<div class="grid grid-pad">
+  <div *ngFor="let project of projects" [routerLink]="['/detail', project.id]" class="col-1-4">
+    <div class="module project">
+      <h4>{{project.title}}</h4>
+    </div>
+  </div>
+</div>
+
+<h3>Need more volunteers</h3>
