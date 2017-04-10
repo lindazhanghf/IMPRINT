@@ -13,4 +13,11 @@ export class CategoryService {
     return this.getCategories()
                .then(categories => categories.find(category => category.id === id));
   }
+  // getCategories(): Category[] {
+  //   return CATEGORIES;
+  // }
+
+  // getCategory(id: number): Category {
+  // 	return CATEGORIES.find(category => category.id === id)
+  // }
 }

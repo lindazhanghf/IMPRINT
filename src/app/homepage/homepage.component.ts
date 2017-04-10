@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Project } from './../project';
 import { ProjectService } from './../project.service';
 
@@ -24,7 +23,7 @@ export class HomepageComponent implements OnInit {
         this.projects = projects
       });
     console.log(this.projects);
-  	// this.projects = this.projectService.getProjects();
-  	// console.log(this.projects);
+  //   this.projects = this.projectService.getProjects();
+  //   console.log(this.projects);
   }
 }

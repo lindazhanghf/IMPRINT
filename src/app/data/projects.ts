@@ -11,7 +11,7 @@ export const PROJECTS: Project[] = [
     media: ``,
     neighborhood: 0,
     progress: 0.7,
-    thumbnail: ``
+    thumbnail: `./../../assets/thumbnails/piedmont_park.jpg`
   },
   {
     id: 1,
@@ -23,7 +23,7 @@ export const PROJECTS: Project[] = [
     media: ``,
     neighborhood: 0,
     progress: 0.7,
-    thumbnail: ``
+    thumbnail: `./../../assets/thumbnails/bikes.png`
   },
   {
     id: 2,
@@ -35,7 +35,7 @@ export const PROJECTS: Project[] = [
     media: ``,
     neighborhood: 0,
     progress: 0.8,
-    thumbnail: ``
+    thumbnail: `./../../assets/thumbnails/botanic_garden.png`
   },
   {
     id: 3,
@@ -47,6 +47,6 @@ export const PROJECTS: Project[] = [
     media: ``,
     neighborhood: 0,
     progress: 0.9,
-    thumbnail: ``
+    thumbnail: `./../../assets/thumbnails/womens_march.png`
   }
 ];

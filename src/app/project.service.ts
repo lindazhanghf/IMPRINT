@@ -9,15 +9,15 @@ export class ProjectService {
     console.log(PROJECTS);
     return Promise.resolve(PROJECTS);
   }
-  // getProjects(): Project[] {
-  //   console.log(PROJECTS);
-  //   return PROJECTS;
-  // }
-
   getProject(id: number): Promise<Project> {
     return this.getProjects()
                .then(projects => PROJECTS.find(project => project.id === id));
   }
+
+  // getProjects(): Project[] {
+  //   console.log(PROJECTS);
+  //   return PROJECTS;
+  // }
 
   // getProject(id: number): Project {
   //   return PROJECTS.find(project => project.id === id);

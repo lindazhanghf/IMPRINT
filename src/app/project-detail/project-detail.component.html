@@ -1,8 +1,30 @@
 <div *ngIf="project">
   <h2>{{project.title}}</h2>
-  <div>
-    <label>Detail: </label>
-    <input [(ngModel)]="project.title" placeholder="title" />
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <img src="{{project.thumbnail}}">
+      </div>
+      <div class="col-md-5">
+        <p> Category: {{category.name}}</p>
+        <div>
+          <img src="./../../assets/icons/calendar.png" style="width:32px;height:32px;">
+        <span>{{project.date}}</span>
+        </div>
+        <div>
+          <img src="./../../assets/icons/pin2.png" style="width:32px;height:32px;">
+        </div>
+        <div>
+          <img src="./../../assets/icons/clock.png" style="width:32px;height:32px;">
+        </div>
+      <!--   <div>
+          <label>Comment: </label>
+          <input [(ngModel)]="project.title" placeholder="title" />
+        </div> -->
+        <br/>
+        <button>Help Out!</button>
+      </div>
+    </div>
   </div>
-  <button (click)="goBack()">Back</button>
+  <!-- <button (click)="goBack()">Back</button> -->
 </div>

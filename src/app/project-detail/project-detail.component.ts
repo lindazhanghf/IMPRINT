@@ -5,6 +5,8 @@ import 'rxjs/add/operator/switchMap';
 
 import { ProjectService } from './../project.service';
 import { Project } from './../project';
+import { Category } from './../category';
+import { CategoryService } from './../category.service';
 
 @Component({
   selector: 'project-detail',
@@ -16,9 +18,11 @@ import { Project } from './../project';
 export class ProjectDetailComponent implements OnInit {
   // project: Project;
   @Input() project: Project;
+  @Input() category: Category;
 
   constructor(
     private projectService: ProjectService,
+    private categoryService: CategoryService,
     private route: ActivatedRoute,
     private location: Location
   ) {}
@@ -26,7 +30,22 @@ export class ProjectDetailComponent implements OnInit {
   ngOnInit(): void {
     this.route.params
       .switchMap((params: Params) => this.projectService.getProject(+params['id']))
-      .subscribe(project => this.project = project);
+      .subscribe(project => {
+        this.project = project;
+        this.categoryService.getCategory(this.project.category).then(category => {
+          this.category = category;
+        });
+      });
+    // this.route.params
+    //   .switchMap((params: Params) => {
+    //     this.project = this.projectService.getProject(+params['id'])
+    //   })
+    //   .subscribe(project => {
+    //     this.project = project;
+    //     this.categoryService.getCategory(this.project.category).then(category => {
+    //       this.category = category;
+    //     });
+    //   });
   }
 
   goBack(): void {

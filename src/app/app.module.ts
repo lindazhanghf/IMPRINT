@@ -12,6 +12,7 @@ import { AppRoutingModule }     from './app-routing.module';
 // import { HeroService } from './hero.service';
 
 import { ProjectService } from './project.service';
+import { CategoryService } from './category.service';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { ExploreProjectComponent } from './explore-projects/explore-projects.component';
@@ -31,7 +32,7 @@ import { ExploreProjectComponent } from './explore-projects/explore-projects.com
     HttpModule,
     AppRoutingModule
   ],
-  providers: [ProjectService],
+  providers: [ProjectService, CategoryService],
   bootstrap: [AppComponent]
 })
 
