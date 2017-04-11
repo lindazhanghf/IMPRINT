@@ -15,7 +15,9 @@ export const PROJECTS: Project[] = [
     neighborhood: 0,
     address: "400 Park Dr NE, Atlanta, GA 30309/ 14th Street Entrance",
     progress: 0.7,
-    thumbnail: `./../../assets/thumbnails/piedmont_park.jpg`
+    thumbnail: `./../../assets/thumbnails/piedmont_park.jpg`,
+    resources_deadline: ``,
+    resources: []
   },
   {
     id: 1,
@@ -31,7 +33,9 @@ export const PROJECTS: Project[] = [
     neighborhood: 0,
     address: "400 Park Dr NE, Atlanta, GA 30309/ 14th Street Entrance",
     progress: 0.7,
-    thumbnail: `./../../assets/thumbnails/bikes.png`
+    thumbnail: `./../../assets/thumbnails/bikes.png`,
+    resources_deadline: ``,
+    resources: []
   },
   {
     id: 2,
@@ -47,7 +51,9 @@ export const PROJECTS: Project[] = [
     neighborhood: 0,
     address: "400 Park Dr NE, Atlanta, GA 30309/ 14th Street Entrance",
     progress: 0.8,
-    thumbnail: `./../../assets/thumbnails/botanic_garden.png`
+    thumbnail: `./../../assets/thumbnails/botanic_garden.png`,
+    resources_deadline: ``,
+    resources: []
   },
   {
     id: 3,
@@ -63,6 +69,8 @@ export const PROJECTS: Project[] = [
     neighborhood: 0,
     address: "400 Park Dr NE, Atlanta, GA 30309/ 14th Street Entrance",
     progress: 0.9,
-    thumbnail: `./../../assets/thumbnails/womens_march.png`
+    thumbnail: `./../../assets/thumbnails/womens_march.png`,
+    resources_deadline: ``,
+    resources: []
   }
 ];

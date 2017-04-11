@@ -1,3 +1,5 @@
+import { Resource }         from './resource';
+
 export class Project {
   id: number;
 
@@ -19,5 +21,8 @@ export class Project {
 
   progress: number; // Percentage of progress (0 - 1.0)
   thumbnail: string; // Path to thumbnail image
+
   // Resources needed... (resources class)
+  resources_deadline: string;
+  resources: Resource[];
 }
