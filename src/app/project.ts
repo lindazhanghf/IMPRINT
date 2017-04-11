@@ -4,7 +4,8 @@ export class Project {
   id: number;
 
   title: string;
-  user: number; // User ID
+  userID: number; // User ID
+  userName: string; // User's name
 
   description: string;
 
@@ -17,9 +18,11 @@ export class Project {
   media: string; // Related media (pictures, videos, URLS, etc.)
 
   neighborhood: number; // Neighborhood ID
+  locationName: string;
   address: string; // Actual address of the event
 
   progress: number; // Percentage of progress (0 - 1.0)
+  neededVol: number; // Number of volunteers needed
   thumbnail: string; // Path to thumbnail image
 
   // Resources needed... (resources class)
