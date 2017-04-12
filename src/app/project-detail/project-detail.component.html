@@ -38,6 +38,16 @@
     </div>
     <h3>Details</h3>
     <span>{{project.description}}</span>
+    <h3>Tags</h3>
+    <button>{{project.tag.split(",")[0]}}</button>
+    <button>{{project.tag.split(",")[1]}}</button>
+    <!--<span id="tags"></span>-->
+    <!--<script>-->
+      <!--var tagList = project.tag.split(",");-->
+      <!--for(i = 0; i < tagList.length; i++) {-->
+        <!--<button>tagList[i]</button>;-->
+      <!---->
+    <!--</script>-->
   </div>
   <!-- <button (click)="goBack()">Back</button> -->
 </div>
