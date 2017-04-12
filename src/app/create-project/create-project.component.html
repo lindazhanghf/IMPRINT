@@ -9,7 +9,17 @@
       <div style="padding-left: 10px;">
         <h3>Category</h3>
         <p>Select a category that best represents your project:</p>
-        <input [(ngModel)]="project.title" placeholder="Select Category" />
+        <!-- <input [(ngModel)]="project.title" placeholder="Select Category" /> -->
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{category.name}}
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <div *ngFor="let c of categories">
+              <a class="dropdown-item" (click)="onSelect(c)">{{c.name}}</a>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div style="padding-left: 10px;">
@@ -63,7 +73,7 @@
             </div>
             <div class="col-md-4">
               <h2>{{project.title}}</h2>
-              <!-- <p> {{category.name}} | Created by {{project.userName}}</p> -->
+              <p> {{category.name}} | Created by {{project.userName}}</p>
               <div>
                 <img src="./../../assets/icons/calendar.png" style="width:32px;height:32px;">
                 <span>{{project.date}}</span> <br />

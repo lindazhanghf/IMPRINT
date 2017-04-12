@@ -6,7 +6,7 @@ import { OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: [ '../assets/css/bootstrap.min.css', './app.component.css'],
   // template: `<h1>{{title}}</h1><h2>{{hero}} details!</h2>  `
 
 })

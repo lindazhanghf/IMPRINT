@@ -6,15 +6,15 @@ import { Location }                 from '@angular/common';
 import 'rxjs/add/operator/switchMap';
 
 import { ProjectService } from './../project.service';
-import { Project } from './../project';
+import { Project, Resource } from './../project';
 import { Category } from './../category';
 import { CategoryService } from './../category.service';
-import { Resource }         from './../resource';
+// import { Resource }         from './../resource';
 
 @Component({
   selector: 'create-project',
   templateUrl: './create-project.component.html',
-  styleUrls: ['./../app.component.css']
+  styleUrls: ['./../app.component.css', '../../assets/css/bootstrap.min.css']
 })
 
 
@@ -43,6 +43,24 @@ export class CreateProjectComponent implements OnInit {
   }
 
   categories: Category[];
+  category: Category = {
+    id: -1,
+    name: "Select Category",
+    type: true,
+    description: ""
+  };
+  new_resource: Resource = {
+    id: 0,
+    project: 0,
+    type: '',
+    name: '',
+
+    ideal_number: 0,
+    current_number: 0,
+    contributions: []
+  }
+
+
   projectForm = new FormGroup ({
     name: new FormControl()
   });
@@ -59,7 +77,13 @@ export class CreateProjectComponent implements OnInit {
     this.project.id = this.projectService.getListLength();
     this.categoryService.getCategories().then(categories => {
       this.categories = categories;
+      console.log(categories);
     });
+  }
+
+  onSelect(category : Category) : void {
+    this.category = category;
+    this.project.category = category.id;
   }
 
   submit_project() : void {
