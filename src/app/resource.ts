@@ -1,3 +1,4 @@
+
 export class Resource {
   id: number;
   project: number; // ID of the project it belongs to

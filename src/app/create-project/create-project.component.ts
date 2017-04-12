@@ -15,10 +15,10 @@ import { CategoryService } from './../category.service';
 })
 
 
-export class ProjectDetailComponent implements OnInit {
+export class CreateProjectComponent implements OnInit {
   // project: Project;
-  @Input() project: Project;
-  category: Category;
+  project: Project;
+  categories: Category[];
 
   constructor(
     private projectService: ProjectService,
@@ -28,18 +28,11 @@ export class ProjectDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.route.params
-      .switchMap((params: Params) => this.projectService.getProject(+params['id']))
-      .subscribe(project => {
-        this.project = project;
-        this.categoryService.getCategory(this.project.category).then(category => {
-          this.category = category;
-        });
-      });
+    this.categoryService.getCategories().then(categories => {
+      this.categories = categories;
+    });
     // this.route.params
-    //   .switchMap((params: Params) => {
-    //     this.project = this.projectService.getProject(+params['id'])
-    //   })
+    //   .switchMap((params: Params) => this.projectService.getProject(+params['id']))
     //   .subscribe(project => {
     //     this.project = project;
     //     this.categoryService.getCategory(this.project.category).then(category => {
