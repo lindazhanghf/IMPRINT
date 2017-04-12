@@ -81,6 +81,30 @@ export class CreateProjectComponent implements OnInit {
     });
   }
 
+  newResource(type : string) : void {
+    // this.new_resource : Resource = {
+    //   id: this.project.resources.length,
+    //   project: 0,
+    //   type: '',
+    //   name: '',
+
+    //   ideal_number: 0,
+    //   current_number: 0,
+    //   contributions: []
+    // }
+    this.new_resource.id = this.project.resources.length;
+    this.new_resource.project = this.project.id;
+    this.new_resource.type = type;
+    this.new_resource.name = '';
+
+    this.new_resource.ideal_number = 0;
+    this.new_resource.current_number = 0;
+    this.new_resource.contributions = [];
+
+    this.project.resources.push(this.new_resource);
+    console.log(this.project.resources);
+  }
+
   onSelect(category : Category) : void {
     this.category = category;
     this.project.category = category.id;
