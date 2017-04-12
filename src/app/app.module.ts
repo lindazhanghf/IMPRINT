@@ -12,13 +12,15 @@ import { CategoryService } from './category.service';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { ExploreProjectComponent } from './explore-projects/explore-projects.component';
+import { CreateProjectComponent } from './create-project/create-project.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     ExploreProjectComponent,
-    ProjectDetailComponent
+    ProjectDetailComponent,
+    CreateProjectComponent
   ],
   imports: [
     BrowserModule,

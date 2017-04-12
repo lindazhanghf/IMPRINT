@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, Params }   from '@angular/router';
+import { FormControl, FormGroup } from '@angular/forms';
+import {NgForm}                   from '@angular/forms';
+// import { ActivatedRoute }   from '@angular/router';
 import { Location }                 from '@angular/common';
 import 'rxjs/add/operator/switchMap';
 
@@ -7,42 +9,76 @@ import { ProjectService } from './../project.service';
 import { Project } from './../project';
 import { Category } from './../category';
 import { CategoryService } from './../category.service';
+import { Resource }         from './../resource';
 
 @Component({
-  selector: 'project-detail',
-  templateUrl: './project-detail.component.html',
-  styleUrls: ['./project-detail.component.css']
+  selector: 'create-project',
+  templateUrl: './create-project.component.html',
+  styleUrls: ['./../app.component.css']
 })
 
 
 export class CreateProjectComponent implements OnInit {
-  // project: Project;
-  project: Project;
+  // Define empty form
+  project: Project = {
+    id: 0,
+    title: '',
+    userID: 0, // User ID
+    userName: '', // User's name
+    description: '',
+    date: '',
+    timeOfEvent: '', // Actual time of the event
+    timeLeft: 0, // Days left to sign up
+    category: 0, // Category ID
+    tag: '', // Project tags
+    media: '', // Related media (pictures, videos, URLS, etc.)
+    neighborhood: 0, // Neighborhood ID
+    locationName: '',
+    address: '', // Actual address of the event
+    progress: 0, // Percentage of progress (0 - 1.0)
+    neededVol: 0, // Number of volunteers needed
+    thumbnail: '', // Path to thumbnail image
+    resources_deadline: '',
+    resources: []
+  }
+
   categories: Category[];
+  projectForm = new FormGroup ({
+    name: new FormControl()
+  });
+  step = 1; // Step1: Enter Detail; 2: Resources; 3: Preview
 
   constructor(
     private projectService: ProjectService,
     private categoryService: CategoryService,
-    private route: ActivatedRoute,
     private location: Location
+    // private route: ActivatedRoute,
   ) {}
 
   ngOnInit(): void {
+    this.project.id = this.projectService.getListLength();
     this.categoryService.getCategories().then(categories => {
       this.categories = categories;
     });
-    // this.route.params
-    //   .switchMap((params: Params) => this.projectService.getProject(+params['id']))
-    //   .subscribe(project => {
-    //     this.project = project;
-    //     this.categoryService.getCategory(this.project.category).then(category => {
-    //       this.category = category;
-    //     });
-    //   });
+  }
+
+  submit_project() : void {
+    this.projectService.saveProject(this.project);
+  }
+
+  nextStep(): void {
+    this.step = this.step + 1;
+    if (this.step > 3)
+    {
+      this.submit_project();
+    }
+  }
+
+  previousStep(): void {
+    this.step--;
   }
 
   goBack(): void {
     this.location.back();
   }
-
 }

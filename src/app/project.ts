@@ -1,5 +1,12 @@
 import { Resource }         from './resource';
 
+export class Address {
+  street = '';
+  city   = '';
+  state  = '';
+  zip    = '';
+}
+
 export class Project {
   id: number;
 

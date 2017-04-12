@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomepageComponent }   from './homepage/homepage.component';
 import { ExploreProjectComponent } from './explore-projects/explore-projects.component';
 import { ProjectDetailComponent }  from './project-detail/project-detail.component';
-
+import { CreateProjectComponent } from './create-project/create-project.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'explore', 	component: ExploreProjectComponent },
   { path: 'detail/:id', component: ProjectDetailComponent },
   // { path: 'registration', component: RegistrationComponent}
+  { path: 'create', 	component: CreateProjectComponent },
 ];
 
 @NgModule({

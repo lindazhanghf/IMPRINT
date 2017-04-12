@@ -5,10 +5,10 @@ import { PROJECTS } from './data/projects';
 
 @Injectable()
 export class ProjectService {
-  my_projects: Project[] = PROJECTS;
+  project_list: Project[] = PROJECTS;
   getProjects(): Promise<Project[]> {
     console.log(PROJECTS);
-    return Promise.resolve(this.my_projects);
+    return Promise.resolve(this.project_list);
   }
 
   getProject(id: number): Promise<Project> {
@@ -25,7 +25,11 @@ export class ProjectService {
   //   return PROJECTS.find(project => project.id === id);
   // }
 
+  getListLength() : number {
+    return this.project_list.length;
+  }
+
   saveProject(new_project) {
-    this.my_projects.push(new_project);
+    this.project_list.push(new_project);
   }
 }

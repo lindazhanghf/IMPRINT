@@ -22,7 +22,6 @@ export class HomepageComponent implements OnInit {
     this.projectService.getProjects().then(projects => {
         this.projects = projects
       });
-    console.log(this.projects);
   //   this.projects = this.projectService.getProjects();
   //   console.log(this.projects);
   }

@@ -1,30 +1,105 @@
-<div *ngIf="project">
-  <h2>{{project.title}}</h2>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-5">
-        <img src="{{project.thumbnail}}" style="width:450px;">
+<div class="container">
+  <div class="row">
+    <div *ngIf="step==1">
+      <h2> Step: {{step}} Enter Detail </h2>
+      <div style="padding-left: 10px;">
+        <h3>Project Name</h3>
+        <input [(ngModel)]="project.title" placeholder="Enter Title" />
       </div>
-      <div class="col-md-3">
-        <!-- <p> Category: {{category.name}}</p> -->
-        <div>
-          <img src="./../../assets/icons/calendar.png" style="width:32px;height:32px;">
-        <!-- <span>{{project.date}}</span> -->
-        </div>
-        <div>
-          <img src="./../../assets/icons/pin2.png" style="width:32px;height:32px;">
-        </div>
-        <div>
-          <img src="./../../assets/icons/clock.png" style="width:32px;height:32px;">
-        </div>
-      <!--   <div>
-          <label>Comment: </label>
-          <input [(ngModel)]="project.title" placeholder="title" />
-        </div> -->
-        <br/>
-        <button>Save </button>
+      <div style="padding-left: 10px;">
+        <h3>Category</h3>
+        <p>Select a category that best represents your project:</p>
+        <input [(ngModel)]="project.title" placeholder="Select Category" />
       </div>
+
+      <div style="padding-left: 10px;">
+        <h3>Short description</h3>
+        <!-- <p>Describe your project in 200 words:</p> -->
+        <input [(ngModel)]="project.description" placeholder="Enter description" />
+      </div>
+
+      <div style="padding-left: 10px;">
+        <h3>Project date &amp; time</h3>
+        <input [(ngModel)]="project.date" placeholder="04/12/2017" />
+        <img src="./../../assets/icons/calendar.png" style="width:32px;height:32px;">
+      </div>
+
+      <div style="padding-left: 10px;">
+        <h3>Location</h3>
+        <input [(ngModel)]="project.address" placeholder="Street, APT, etc." />
+        <img src="./../../assets/icons/pin2.png" style="width:32px;height:32px;"> <br/>
+        <input [(ngModel)]="project.address" placeholder="City, state" />
+      </div>
+
+      <div style="padding-left: 10px;">
+        <h3>Image</h3>
+        <p>Upload an image for your project's thumbnail:</p>
+        <input [(ngModel)]="project.thumbnail" placeholder="Image URL" />
+      </div>
+      <br/>
+      <button (click)="nextStep()">Save &amp; Continue</button>
     </div>
+
+    <div *ngIf="step==2">
+      <h2> Step: {{step}} Resources </h2>
+      <div style="padding-left: 10px;">
+        <h3>Funding</h3>
+        <p>Add the amount of funding you will need:</p>
+        <input [(ngModel)]="project.title" placeholder="Select Category" />
+      </div>
+
+      <button (click)="previousStep()">Back</button>
+      <button (click)="nextStep()">Preview Project </button>
+    </div>
+
+    <div *ngIf="step==3">
+      <h2> Step: {{step}} Preview Project</h2>
+      <div class="preview">
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+              <img src="{{project.thumbnail}}" style="width:450px;">
+            </div>
+            <div class="col-md-4">
+              <h2>{{project.title}}</h2>
+              <!-- <p> {{category.name}} | Created by {{project.userName}}</p> -->
+              <div>
+                <img src="./../../assets/icons/calendar.png" style="width:32px;height:32px;">
+                <span>{{project.date}}</span> <br />
+                <span>{{project.timeOfEvent}}</span>
+              </div>
+              <div>
+                <img src="./../../assets/icons/pin2.png" style="width:32px;height:32px;">
+                <span>{{project.locationName}}</span><br />
+                <span>{{project.address}}</span>
+              </div>
+              <div>
+                <img src="./../../assets/icons/clock.png" style="width:32px;height:32px;">
+                <span>{{project.timeLeft}} days left to sign up</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                  {{project.progress * 100}}%
+                </div>
+              </div>
+              <span>{{project.neededVol}} more volunteers needed!</span>
+              <br/>
+              <button>Help Out!</button>
+            </div>
+          </div>
+          <h3>Details</h3>
+          <span>{{project.description}}</span>
+          <h3>Tags</h3>
+          <button>{{project.tag.split(",")[0]}}</button>
+          <button>{{project.tag.split(",")[1]}}</button>
+        </div>
+
+      </div><br/>
+      <button (click)="previousStep()">Back</button>
+      <button (click)="nextStep()" [routerLink]="['/detail', project.id]">Publish Project</button>
+    </div>
+
   </div>
-  <!-- <button (click)="goBack()">Back</button> -->
 </div>
+<!-- <button (click)="goBack()">Back</button> -->
