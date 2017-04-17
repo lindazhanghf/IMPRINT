@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'circular-std-book';
+  src: url('assets/fonts/circular-std-book.otf'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'circular-std-medium';
+  src: url('assets/fonts/circular-std-medium.ttf'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'circular-std-bold';
+  src: url('assets/fonts/circular-std-bold.otf'); /* Legacy iOS */
+}
+
+html, body {
+    font-family: 'circular-std-book';
+    margin: 30px;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.h2, h2 {
+    font-family: 'circular-std-bold';
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.col-1-4 {
+    padding: 30px;
+}
