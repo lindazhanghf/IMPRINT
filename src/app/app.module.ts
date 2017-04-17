@@ -13,6 +13,8 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { ExploreProjectComponent } from './explore-projects/explore-projects.component';
 import { CreateProjectComponent } from './create-project/create-project.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { AboutComponent} from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { CreateProjectComponent } from './create-project/create-project.componen
     HomepageComponent,
     ExploreProjectComponent,
     ProjectDetailComponent,
-    CreateProjectComponent
+    CreateProjectComponent,
+    RegistrationComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

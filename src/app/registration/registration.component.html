@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <!-- <div>
+      <h2>Log in</h2>
+      <p>Register?</p>
+    </div> -->
+    <div *ngIf="step==1">
+      <h2> Log in </h2>
+      <button (click)="nextStep()">Next</button>
+    </div>
+
+    <div *ngIf="step==2">
+      <h2> Register </h2>
+
+
+      <button (click)="previousStep()">Back</button>
+      <button (click)="nextStep()">Next </button>
+    </div>
+
+    <div *ngIf="step==3">
+      <h2> Profile pic</h2>
+      <br/>
+      <button (click)="previousStep()">Back</button>
+      <button (click)="nextStep()" [routerLink]="['/detail', project.id]">Publish Project</button>
+    </div>
+
+  </div>
+</div>
