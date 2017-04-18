@@ -3,17 +3,14 @@
     font-family: 'circular-std-book';
     src: url('assets/fonts/circular-std-book.otf'); /* Legacy iOS */
 }
-
 @font-face {
     font-family: 'circular-std-medium';
     src: url('assets/fonts/circular-std-medium.ttf'); /* Legacy iOS */
 }
-
 @font-face {
     font-family: 'circular-std-bold';
     src: url('assets/fonts/circular-std-bold.otf'); /* Legacy iOS */
 }
-
 body {
     font-family: 'circular-std-book';
     max-width: 100%;
@@ -21,52 +18,115 @@ body {
     margin-left: 60px;
     margin-right: 60px;
 }
-
 nav {
     position: -webkit-sticky;
     position: sticky;
+    z-index: 1;
     top: 0px;
-    margin-left: -60px;
-    padding-top: 10px;
+    margin-left: -65px;
+    padding-top: 7.5px;
     padding-left: 60px;
     padding-right: 60px;
-    background-color: #555555;
+    background-color: #f2f2f2;
     height: 80px;
     width: 120%;
     vertical-align: center;
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
 }
-
+nav a {
+    padding: 5px 20px;
+    color: #000000;
+}
+nav .logo {
+    padding-top: 7.5px;
+    color: #000000;
+}
 nav._ngcontent-c0, a.active._ngcontent-c0 {
-    color: #ffffff;
+    color: #000000;
+    padding-left: 130px;
 }
-
 .h2, h2 {
-    font-family: 'circular-std-medium';
+    font-family: 'circular-std-book';
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     color: #000000;
 }
-
+#motto {
+    font-family: 'circular-std-bold';
+    font-size: 40px;
+    margin-left: 0px;
+    margin-top: 50px;
+    text-align: center;
+}
+div.col-lg-4 {
+    margin-left: 60px;
+    margin-right: 60px;
+    display: block;
+    text-align: center;
+    width: 1150px;
+    background-color: #D8D8D8;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 100px;
+    z-index: 0;
+}
+.col-lg-4 input {
+    border: none;
+    display: inline-block;
+    float: left;
+    padding: 15px;
+    font-size: 18px;
+    margin-right: 10px;
+}
+.col-lg-4 input::placeholder {
+    color: #969696;
+}
+.col-lg-4 input[name="projectSearch2"] {
+    margin-left: 15px;
+    width: 475px;
+    font-family: 'circular-std-book';
+}
+.col-lg-4 input[name="neighSearch"] {
+    width: 225px;
+}
+.col-lg-4 input[name="dateSearch"] {
+    width: 185px;
+}
+.col-lg-4 button {
+    width: 175px;
+    margin-right: 15px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    height: 52.5px;
+    font-size: 16px;
+    font-family: 'circular-std-medium';
+}
+.h1, h1 {
+    margin-top: 50px;
+    margin-left: 20px;
+    font-family: "circular-std-medium";
+}
 .grid .grid-pad {
     text-align: center;
     display: block;
     margin-right: auto;
     margin-left: auto;
 }
-
 div.col-1-4 {
     width: 100px;
     text-align: center;
-    border-style: solid;
-    border-width: 1px;
+/*    border-style: solid;
+    border-width: 1px;*/
     margin-left: auto;
     margin-right: auto;
     display: block;
     padding-left: auto;
     padding-right: auto;
 }
-
 .inner {
     border-style: solid;
     border-width: 1px;
@@ -76,10 +136,9 @@ div.col-1-4 {
     overflow: scroll;
     width: 95%;
     height: 90%;
-    padding-left: auto;
-    padding-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
 }
-
 div.col-1-4 img {
 /*    display: block;
     margin-left: auto;
@@ -88,7 +147,6 @@ div.col-1-4 img {
     width: 95%;
     height: 95%;
 }
-
 div.progress-bar {
     display: block;
     margin: 0 auto;
@@ -99,7 +157,6 @@ div.progress-bar {
     border-width: 2px;
     border-color: #000000;*/
 }
-
 div.col-1-4 p {
     margin-top: 0px;
     text-align: center;
