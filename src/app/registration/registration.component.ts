@@ -41,6 +41,17 @@ export class RegistrationComponent implements OnInit {
     this.step--;
   }
 
+  adminReg(): void {
+    this.step = 5;
+  }
+
+  returnLogin(): void {
+    this.step = 1;
+  }
+
+  returnSignUp(): void{
+    this.step = 2;
+  }
   // goBack(): void {
   //   this.location.back();
   // }

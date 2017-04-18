@@ -5,24 +5,133 @@
       <p>Register?</p>
     </div> -->
     <div *ngIf="step==1">
-      <h2> Log in </h2>
-      <button (click)="nextStep()">Next</button>
+      <br><br>
+      <h2> Welcome! </h2>
+      <hr/>
+      <form>
+        Username: <br>
+        <input type="text" name="username" placeholder=" "><br><br>
+        Password: <br>
+        <input type="text" name="password" placeholder=" "><br><br>
+      </form>
+      <!--<nav>-->
+        <!--<button routerLink="/home" routerLinkActive="active" class="logo">Login</button>-->
+      <!--</nav>-->
+      <button routerLink="/home" routerLinkActive="active" class="logo">Login</button>
+      <button (click)="nextStep()">Sign Up</button>
     </div>
 
     <div *ngIf="step==2">
-      <h2> Register </h2>
-
-
+      <br><br>
+      <h2> Tell Us a Little About You </h2>
+      <hr/>
+      <form>
+        Name*:<br>
+        <input type="text" name="name" placeholder=""><br><br>
+        Phone Number*:<br>
+        <input type="text" name="phoneNum" placeholder=""><br><br>
+        Email*:<br>
+        <input type="text" name="email" placeholder=""><br><br>
+        Password*:<br>
+        <input type="text" name="password"><br><br>
+        Confirm Password*:<br>
+        <input type="text" name="confirmPass"><br><br>
+      </form>
+      <b>*Required field</b>
+      <br><br>
+      Are you a Community Organization? Click <button (click)=adminReg()>HERE</button> to register as an Admin.
+      <br><br>
       <button (click)="previousStep()">Back</button>
-      <button (click)="nextStep()">Next </button>
+      <button (click)="nextStep()">Next</button>
+      <br><br>
+      <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width:33.33%">
+              33.33%
+      </div>
+      <!--<button (click)="previousStep()">Back</button>-->
+      <!--<button (click)="nextStep()">Next </button>-->
     </div>
 
     <div *ngIf="step==3">
-      <h2> Profile pic</h2>
-      <br/>
+      <br><br>
+      <h2> Build Your Bio </h2>
+      <hr/>
+      Add a description about yourself:<br><br>
+      <textarea rows="6" cols = "50"></textarea>
+      <br><br>
       <button (click)="previousStep()">Back</button>
-      <button (click)="nextStep()" [routerLink]="['/detail', project.id]">Publish Project</button>
+      <button (click)="nextStep()">Next</button>
+      <br><br>
+      <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 66.66%">
+        66.66%
+      </div>
     </div>
 
+    <div *ngIf="step==4">  <!-- Regular User End Page -->
+      <br><br>
+      <h2> Get Started </h2>
+      <hr/>
+      Choose categories you are interested in to receive updates on community events:
+      <br>
+      <form action="">
+        <input type="checkbox" name="category" value="Education">Education<br>
+        <input type="checkbox" name="category" value="Environmental">Environmental<br>
+        <input type="checkbox" name="category" value="Donation">Donation<br>
+        <input type="checkbox" name="category" value="Public Safety">Public Safety<br>
+        <input type="checkbox" name="category" value="Sales">Sales<br>
+        <input type="checkbox" name="category" value="Social">Social<br>
+      </form>
+      <br><br>
+      <button (click)="previousStep()">Back</button>
+      <button (click)="returnLogin()">Done</button>
+      <br><br>
+      <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+           100%
+      </div>
+    </div>
+
+    <div *ngIf="step==5">  <!-- Admin Registration -->
+      <br><br>
+      <h2> Tell Us a Little About You </h2>
+      <hr/>
+      Name*: <br>
+      <input type="text" name="name" placeholder=""><br><br>
+      Official Contact Number*: <br>
+      <input type="text" name="phoneNumber" placeholder=""><br><br>
+      Official Email*: <br>
+      <input type="text" name="email" placeholder=""><br><br>
+      Community Name*: <br>
+      <input type="text" name="communityName" placeholder=""><br><br>
+      Password*:<br>
+      <input type="type" name="password"><br><br>
+      Confirm Password*:<br>
+      <input type="type" name="confirmPass"><br><br>
+
+      <br>
+      <b>*Required field</b>
+      <br><br>
+
+      <button (click)= "returnSignUp()">Back</button>
+      <button (click)="nextStep()">Done</button>
+
+      <br><br>
+      <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+        50%
+      </div>
+    </div>
+    <div *ngIf="step==6">   <!-- Admin End Page -->
+      <br><br>
+      <h2> Register as an Admin </h2>
+      <hr/>
+      You will receive an email from IMPRINT. Complete the admin verification as instructed in the email to complete
+      your registration.
+      <br>
+      Thank you!
+      <br><br>
+      <button (click)="returnLogin()">Done</button>
+      <br><br>
+      <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+        100%
+      </div>
+    </div>
   </div>
 </div>
