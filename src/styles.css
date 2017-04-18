@@ -27,13 +27,13 @@ nav {
     padding-top: 7.5px;
     padding-left: 60px;
     padding-right: 60px;
-    background-color: #f2f2f2;
+    background-color: #fafafa;
     height: 80px;
     width: 120%;
     vertical-align: center;
-    -webkit-box-shadow: 0 8px 6px -6px #999;
-    -moz-box-shadow: 0 8px 6px -6px #999;
-    box-shadow: 0 8px 6px -6px #999;
+    -webkit-box-shadow: 0 8px 6px -6px #d6d6d6;
+    -moz-box-shadow: 0 8px 6px -6px #d6d6d6;
+    box-shadow: 0 8px 6px -6px #d6d6d6;
 }
 nav a {
     padding: 5px 20px;
@@ -49,10 +49,13 @@ nav._ngcontent-c0, a.active._ngcontent-c0 {
 }
 .h2, h2 {
     font-family: 'circular-std-book';
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 0px;
     text-align: center;
     color: #000000;
+    padding-left: 5px;
+    font-size: 28px;
 }
 #motto {
     font-family: 'circular-std-bold';
@@ -67,10 +70,10 @@ div.col-lg-4 {
     display: block;
     text-align: center;
     width: 1150px;
-    background-color: #D8D8D8;
+    background-color: #ededed;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
     z-index: 0;
 }
 .col-lg-4 input {
@@ -128,6 +131,7 @@ div.col-1-4 {
     padding-right: auto;
 }
 .inner {
+    border-color: #e0e0e0;
     border-style: solid;
     border-width: 1px;
     text-align: center;
@@ -139,25 +143,33 @@ div.col-1-4 {
     padding-left: 10px;
     padding-right: 10px;
 }
+.inner p {
+  font-size: 14px;
+}
 div.col-1-4 img {
 /*    display: block;
     margin-left: auto;
     margin-right: auto;*/
     margin-top: 10px;
-    width: 95%;
-    height: 95%;
+    width: 99%;
+    height: 99%;
 }
 div.progress-bar {
     display: block;
     margin: 0 auto;
     background-color: #6DE4D0;
-    height: 23px;
+    height: 30px;
     float: none;
+    padding-top: 5px;
+    font-size: 14px;
+    font-family: 'circular-std-book';
+    width:90%;
 /*    border-style: solid;
     border-width: 2px;
     border-color: #000000;*/
 }
 div.col-1-4 p {
+    margin-left: 0px;
     margin-top: 0px;
     text-align: center;
     padding-top: 14px;
