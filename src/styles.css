@@ -1,33 +1,107 @@
 /* You can add global styles to this file, and also import other style files */
 @font-face {
-  font-family: 'circular-std-book';
-  src: url('assets/fonts/circular-std-book.otf'); /* Legacy iOS */
-}
-
-@font-face {
-  font-family: 'circular-std-medium';
-  src: url('assets/fonts/circular-std-medium.ttf'); /* Legacy iOS */
-}
-
-@font-face {
-  font-family: 'circular-std-bold';
-  src: url('assets/fonts/circular-std-bold.otf'); /* Legacy iOS */
-}
-
-html, body {
     font-family: 'circular-std-book';
-    margin: 30px;
+    src: url('assets/fonts/circular-std-book.otf'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'circular-std-medium';
+    src: url('assets/fonts/circular-std-medium.ttf'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'circular-std-bold';
+    src: url('assets/fonts/circular-std-bold.otf'); /* Legacy iOS */
+}
+
+body {
+    font-family: 'circular-std-book';
     max-width: 100%;
     overflow-x: hidden;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    margin-left: -60px;
+    padding-top: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
+    background-color: #555555;
+    height: 80px;
+    width: 120%;
+    vertical-align: center;
+}
+
+nav._ngcontent-c0, a.active._ngcontent-c0 {
+    color: #ffffff;
 }
 
 .h2, h2 {
-    font-family: 'circular-std-bold';
+    font-family: 'circular-std-medium';
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    color: #000000;
 }
 
-.col-1-4 {
-    padding: 30px;
+.grid .grid-pad {
+    text-align: center;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+div.col-1-4 {
+    width: 100px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-left: auto;
+    padding-right: auto;
+}
+
+.inner {
+    border-style: solid;
+    border-width: 1px;
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+    overflow: scroll;
+    width: 95%;
+    height: 90%;
+    padding-left: auto;
+    padding-right: auto;
+}
+
+div.col-1-4 img {
+/*    display: block;
+    margin-left: auto;
+    margin-right: auto;*/
+    margin-top: 10px;
+    width: 95%;
+    height: 95%;
+}
+
+div.progress-bar {
+    display: block;
+    margin: 0 auto;
+    background-color: #6DE4D0;
+    height: 23px;
+    float: none;
+/*    border-style: solid;
+    border-width: 2px;
+    border-color: #000000;*/
+}
+
+div.col-1-4 p {
+    margin-top: 0px;
+    text-align: center;
+    padding-top: 14px;
 }

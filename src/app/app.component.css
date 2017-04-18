@@ -65,22 +65,37 @@ nav a {
   text-decoration: none;
   margin-top: 10px;
   display: inline-block;
-  background-color: #eee;
   border-radius: 4px;
 }
 nav a:visited, a:link {
-  color: #607D8B;
+  color: #ffffff;
 }
 nav a:hover {
-  color: #039be5;
-  background-color: #CFD8DC;
+  color: #c4c4c4;
 }
 nav a.active {
-  color: #039be5;
+  color: #ffffff;
+  font-size: 22px;
+  font-family: "circular-std-medium";
 }
-div {
-  padding: 10px 0px 10px 0px;
+nav input {
+  padding: 5px;
+  font-family: 'circular-std-book';
 }
+
+nav input:active {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #000000;
+}
+
+nav input[name="projectSearch"] {
+}
+
+nav input a {
+  padding-left: 50px;
+}
+
 .preview {
   border: 2px solid lightgrey;border-radius: 10px;
 }
