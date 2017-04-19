@@ -206,3 +206,41 @@ project-detail #calendarIcon, #locationIcon, #timeIcon {
   height: 40px;
   width: 40px;
 }
+h3, .h3 {
+  font-family: 'circular-std-medium';
+  font-size: 36px;
+}
+.detailsHeader {
+  margin-top: 75px;
+}
+.tagsHeader {
+  margin-top: 50px;
+}
+.tagButtons {
+  margin-left: 5px;
+}
+div.tagButtons button {
+  background-color: #000;
+  font-family: 'circular-std-book';
+  font-size: 15px;
+  color: #fff;
+  padding: 12.5px;
+  margin-right: 5px;
+  border-radius: 0px;
+}
+div.tagButtons button:hover {
+  background-color: #444;
+}
+.col-md-4 button.helpButton {
+  background-color: #000;
+  font-family: 'circular-std-medium';
+  font-size: 22px;
+  color: #fff;
+  padding: 15px;
+  margin-right: 5px;
+  border-radius: 0px;
+}
+.prjDesc {
+  font-size: 16px;
+  font-family: 'circular-std-book';
+}

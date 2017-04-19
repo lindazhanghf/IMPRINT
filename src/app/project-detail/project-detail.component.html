@@ -33,14 +33,16 @@
           <input [(ngModel)]="project.title" placeholder="title" />
         </div> -->
         <br/>
-        <button>Help Out!</button>
+        <button class="helpButton">HELP OUT</button>
       </div>
     </div>
-    <h3>Details</h3>
-    <span>{{project.description}}</span>
-    <h3>Tags</h3>
+    <h3 class="detailsHeader">Details</h3>
+    <span class="prjDesc">{{project.description}}</span>
+    <h3 class="tagsHeader">Tags</h3>
+    <div class="tagButtons">
     <button>{{project.tag.split(",")[0]}}</button>
     <button>{{project.tag.split(",")[1]}}</button>
+    </div>
     <!--<span id="tags"></span>-->
     <!--<script>-->
       <!--var tagList = project.tag.split(",");-->
