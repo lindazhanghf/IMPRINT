@@ -3,23 +3,23 @@
   <div class="container">
     <div class="row">
       <div class="col-md-7">
-        <img src="{{project.thumbnail}}" style="width:450px;">
+        <img src="{{project.thumbnail}}">
       </div>
       <div class="col-md-4">
         <h2>{{project.title}}</h2>
-        <p> {{category.name}} | Created by {{project.userName}}</p>
-        <div>
-          <img src="./../../assets/icons/calendar.png" style="width:32px;height:32px;">
+        <p id="tagline"> {{category.name}} | Created by {{project.userName}}</p>
+        <div class="dateDiv">
+          <img id="calendarIcon" src="./../../assets/icons/calendar.png">
           <span>{{project.date}}</span> <br />
           <span>{{project.timeOfEvent}}</span>
         </div>
-        <div>
-          <img src="./../../assets/icons/pin2.png" style="width:32px;height:32px;">
+        <div class="locationDiv">
+          <img id="locationIcon" src="./../../assets/icons/pin2.png">
           <span>{{project.locationName}}</span><br />
           <span>{{project.address}}</span>
         </div>
-        <div>
-          <img src="./../../assets/icons/clock.png" style="width:32px;height:32px;">
+        <div class="timeDiv">
+          <img id="timeIcon" src="./../../assets/icons/clock.png">
           <span>{{project.timeLeft}} days left to sign up</span>
         </div>
         <div class="progress">
