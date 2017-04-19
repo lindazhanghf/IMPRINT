@@ -262,3 +262,6 @@ div.tagButtons button:hover {
     padding: 30px;
 }
 
+div.aboutContainer h2 {
+margin-top: 30px
+}
