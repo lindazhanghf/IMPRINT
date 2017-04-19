@@ -8,7 +8,7 @@
 
 <br clear="all" />
 
-<h1>Trending</h1>
+<h1 class="trendingHeader">Trending</h1>
 <div class="grid grid-pad">
   <div *ngFor="let project of projects.slice(0,3)" [routerLink]="['/detail', project.id]" class="col-1-4">
     <div class="inner" id={{project.id}}>
