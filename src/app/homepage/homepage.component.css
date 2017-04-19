@@ -1,8 +1,12 @@
 [class*='col-'] {
   float: left;
 }
+<<<<<<< Updated upstream
+=======
+h2 {margin-left: 10px;}
+>>>>>>> Stashed changes
 [class*='col-']:last-of-type {
-  padding-right: 0;
+  padding-right: ;
 }
 a {
   text-decoration: none;
