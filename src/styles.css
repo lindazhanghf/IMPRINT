@@ -279,3 +279,6 @@ padding-left: 5px;
 width: 70%;
 text-align: left;
 }
+div.Playbooktitle p {
+  font-size-adjust: 20px;
+}
