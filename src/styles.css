@@ -17,6 +17,7 @@ body {
     overflow-x: hidden;
     margin-left: 60px;
     margin-right: 60px;
+    padding-bottom: 400px;
 }
 nav {
     position: -webkit-sticky;
@@ -65,8 +66,8 @@ nav._ngcontent-c0, a.active._ngcontent-c0 {
     text-align: center;
 }
 div.col-lg-4 {
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: auto;
+    margin-right: auto;
     display: block;
     text-align: center;
     width: 1150px;
@@ -75,6 +76,13 @@ div.col-lg-4 {
     padding-bottom: 20px;
     margin-bottom: 70px;
     z-index: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.col-lg-4 {
+  padding-right: 0px;
+  padding-left: 0px;
 }
 .col-lg-4 input {
     border: none;
@@ -109,7 +117,7 @@ div.col-lg-4 {
     font-family: 'circular-std-medium';
 }
 .h1, h1 {
-    margin-top: 50px;
+    margin-top: 150px;
     margin-left: 20px;
     font-family: "circular-std-medium";
 }
@@ -137,7 +145,6 @@ div.col-1-4 {
     text-align: center;
     display: inline-block;
     margin: 0 auto;
-    overflow: scroll;
     width: 95%;
     height: 90%;
     padding-left: 10px;
