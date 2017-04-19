@@ -55,45 +55,47 @@
       <div style="padding-left: 10px;">
         <h3>Funding</h3>
         <p>Add the amount of funding you will need:</p>
-        <!-- <input [(ngModel)]="project.title" placeholder="Select Category" /> -->
         <div *ngFor="let resource of project.resources">
           <div *ngIf="resource.type=='funding'">
             <input [(ngModel)]="resource.name" placeholder="E.g. Food&Drink" />
             <input [(ngModel)]="resource.ideal_number" placeholder="E.g. $5" />
+            <!-- <img src="./../../assets/icons/Delete.svg" style="width:20px;height:20px;" (click)="deleteResource(resource.id)"> -->
           </div>
         </div>
-        <button (click)="newResource('funding')">New resource</button>
+        <div (click)="newResource('funding')" style="padding-top: 5px">
+          <img src="./../../assets/icons/Add.svg" style="width:20px;height:20px;"> New resource
+        </div>
       </div>
 
       <div style="padding-left: 10px;">
         <h3>Volunteers</h3>
         <p>Add the number of volunteers you will need:</p>
-        <!-- <input [(ngModel)]="project.title" placeholder="Select Category" /> -->
         <div *ngFor="let resource of project.resources">
           <div *ngIf="resource.type=='volunteer'">
             <input [(ngModel)]="resource.name" placeholder="E.g. Clean up" />
             <input [(ngModel)]="resource.ideal_number" placeholder="E.g. 5" />
+            <!-- <img src="./../../assets/icons/Delete.svg" style="width:20px;height:20px;" (click)="deleteResource(resource.id)"> -->
           </div>
         </div>
-        <button (click)="newResource('volunteer')">New resource</button>
+        <div (click)="newResource('volunteer')" style="padding-top: 5px">
+          <img src="./../../assets/icons/Add.svg" style="width:20px;height:20px;"> New resource
+        </div>
       </div>
 
       <div style="padding-left: 10px;">
         <h3>Donation</h3>
         <p>Add the number of donation you will need:</p>
-        <!-- <input [(ngModel)]="project.title" placeholder="Select Category" /> -->
         <div *ngFor="let resource of project.resources">
           <div *ngIf="resource.type=='donation'">
             <input [(ngModel)]="resource.name" placeholder="E.g. can food" />
             <input [(ngModel)]="resource.ideal_number" placeholder="E.g. 3" />
+            <!-- <img src="./../../assets/icons/Delete.svg" style="width:20px;height:20px;" (click)="deleteResource(resource.id)"> -->
           </div>
         </div>
-        <button (click)="newResource('donation')">New resource</button>
+        <div (click)="newResource('donation')" style="padding-top: 5px">
+          <img src="./../../assets/icons/Add.svg" style="width:20px;height:20px;"> New resource
+        </div>
       </div>
-
-      <button (click)="previousStep()">Back</button>
-      <button (click)="nextStep()">Preview Project </button>
-    </div>
 
     <div *ngIf="step==3">
       <h2> Step: {{step}} Preview Project</h2>

@@ -49,6 +49,7 @@ export class CreateProjectComponent implements OnInit {
     type: true,
     description: ""
   };
+  curr_id: number = 0;
   new_resource: Resource = {
     id: 0,
     project: 0,
@@ -82,27 +83,25 @@ export class CreateProjectComponent implements OnInit {
   }
 
   newResource(type : string) : void {
-    // this.new_resource : Resource = {
-    //   id: this.project.resources.length,
-    //   project: 0,
-    //   type: '',
-    //   name: '',
-
-    //   ideal_number: 0,
-    //   current_number: 0,
-    //   contributions: []
-    // }
-    this.new_resource.id = this.project.resources.length;
+    this.new_resource.id = this.curr_id;
     this.new_resource.project = this.project.id;
     this.new_resource.type = type;
     this.new_resource.name = '';
-
     this.new_resource.ideal_number = 0;
     this.new_resource.current_number = 0;
     this.new_resource.contributions = [];
 
-    this.project.resources.push(this.new_resource);
-    console.log(this.project.resources);
+    this.project.resources.push(
+      // JSON.parse(JSON.stringify(this.new_resource))
+      this.deep_copy(this.new_resource)
+      );
+    this.curr_id = this.curr_id + 1;
+  }
+
+  deleteResource(id : number) : void {
+    this.project.resources.filter(function(resource) {
+      return resource.id != id;
+    })
   }
 
   onSelect(category : Category) : void {
@@ -128,5 +127,18 @@ export class CreateProjectComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  deep_copy(resource): Resource {
+    var resource_copy : Resource = {
+        id: resource.id,
+        project: resource.project,
+        type: resource.type,
+        name: resource.name,
+        ideal_number: resource.ideal_number,
+        current_number: resource.current_number,
+        contributions: []
+    }
+    return resource_copy
   }
 }
