@@ -12,7 +12,7 @@
     src: url('assets/fonts/circular-std-bold.otf'); /* Legacy iOS */
 }
 html {
-  padding-bottom: 100px;
+  padding-bottom: 75px;
 }
 body {
     font-family: 'circular-std-book';
@@ -56,7 +56,7 @@ nav._ngcontent-c0, a.active._ngcontent-c0 {
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 0px;
-    text-align: center;
+    text-align: left;
     color: #000000;
     padding-left: 5px;
     font-size: 28px;
@@ -140,13 +140,15 @@ div.col-1-4 {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    padding-left: auto;
-    padding-right: auto;
+    padding: 10px;
+}
+div.col-1-4[_ngcontent-c1] {
+  width: 33.33%;
 }
 .inner {
-    border-color: #e0e0e0;
+/*    border-color: #e0e0e0;
     border-style: solid;
-    border-width: 1px;
+    border-width: 1px;*/
     text-align: center;
     display: inline-block;
     margin: 0 auto;
@@ -163,18 +165,25 @@ div.col-1-4 img {
     margin-left: auto;
     margin-right: auto;*/
     margin-top: 10px;
-    width: 99%;
-    height: 99%;
+    width: 100%;
+    height: 100%;
+}
+div.progress {
+  margin-left: 10.5px;
+  margin-right: 10.5px;
+  height: 25px;
+  margin-bottom: 5px;
 }
 div.progress-bar {
     display: block;
     margin: 0 auto;
     background-color: #6DE4D0;
-    height: 30px;
+    height: 100%;
     float: left;
     font-size: 14px;
     font-family: 'circular-std-book';
     width:90%;
+    padding-top: 1px;
 /*    border-style: solid;
     border-width: 2px;
     border-color: #000000;*/
@@ -203,7 +212,6 @@ project-detail #tagline {
   font-size: 16px;
   text-align: center;
 }
-<<<<<<< Updated upstream
 div.dateDiv, div.locationDiv, div.timeDiv {
   margin-left: auto;
   margin-right: auto;
@@ -256,8 +264,6 @@ div.tagButtons button:hover {
   font-size: 16px;
   font-family: 'circular-std-book';
 }
-=======
-
 .col-1-4 {
     padding: 30px;
 }
