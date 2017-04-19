@@ -5,23 +5,24 @@
       <div class="col-md-7">
         <img src="{{project.thumbnail}}">
       </div>
-      <div class="col-md-4">
+      <div class="col-md-5">
         <h2>{{project.title}}</h2>
-        <p id="tagline"> {{category.name}} | Created by {{project.userName}}</p>
+        <p id="tagline"> {{category.name}} | Created by {{project.userName}}</p><br>
         <div class="dateDiv">
           <img id="calendarIcon" src="./../../assets/icons/calendar.png">
           <span>{{project.date}}</span> <br />
           <span>{{project.timeOfEvent}}</span>
-        </div>
+        </div><br>
+
         <div class="locationDiv">
           <img id="locationIcon" src="./../../assets/icons/pin2.png">
           <span>{{project.locationName}}</span><br />
           <span>{{project.address}}</span>
-        </div>
+        </div><br>
         <div class="timeDiv">
           <img id="timeIcon" src="./../../assets/icons/clock.png">
           <span>{{project.timeLeft}} days left to sign up</span>
-        </div>
+        </div><br><br>
         <div class="progress">
           <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
             {{project.progress * 100}}%
@@ -32,7 +33,7 @@
           <label>Comment: </label>
           <input [(ngModel)]="project.title" placeholder="title" />
         </div> -->
-        <br/>
+        <br>
         <button class="helpButton">HELP OUT</button>
       </div>
     </div>

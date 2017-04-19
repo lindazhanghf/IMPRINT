@@ -1,6 +1,32 @@
 <h1>{{title}}</h1>
-
+<br><br clear="all" />
 <div class="grid grid-pad">
+  <button>Educational</button>
+  <button>Environmental</button>
+  <button>Public safety</button>
+  <button>Sales</button>
+  <button>Social</button>
+  <button>Food drive</button>
+  <button>Community</button>
+  <button>Outdoor</button>
+  <br clear="all" />
+
+  <button>Looking for donations</button>
+  <button>Nearing volunteer mark</button>
+  <button>Almost at full funding</button>
+  <button>Occurring soon</button>
+  <button>Ending soon</button>
+  <button>Nearby</button>
+  <br clear="all" /><br clear="all" /><br clear="all" />
+
+  <select placeholder="Sort by">
+    <option value="sortBy">Sort by</option>
+    <option value="newest">Newest</option>
+    <option value="popular">Most Popular</option>
+    <option value="recommended">Recommended</option>
+  </select>
+  <br clear="all" /><br clear="all" /><br clear="all" />
+
   <div *ngFor="let project of projects" [routerLink]="['/detail', project.id]" class="col-md-3">
     <!--<div class="module project">-->
     <!--<h4>{{project.title}}</h4>-->
