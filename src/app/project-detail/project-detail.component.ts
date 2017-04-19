@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Params }   from '@angular/router';
 import { Location }                 from '@angular/common';
+import { NgClass, NgStyle}           from '@angular/common';
 import 'rxjs/add/operator/switchMap';
 
 import { ProjectService } from './../project.service';

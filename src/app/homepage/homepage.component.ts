@@ -20,9 +20,8 @@ export class HomepageComponent implements OnInit {
 
   getProjects(): void {
     this.projectService.getProjects().then(projects => {
-        this.projects = projects
+        this.projects = projects.slice(1, 5);
       });
   //   this.projects = this.projectService.getProjects();
-  //   console.log(this.projects);
   }
 }

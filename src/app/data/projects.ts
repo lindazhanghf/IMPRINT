@@ -1,4 +1,17 @@
 import { Project } from './../project';
+import { Resource } from './../resource';
+
+const piedmont_park_resources: Resource[] = [
+    {
+        id: 0,
+        project: 0,
+        type: "volunteer",
+        name: "Clean-up",
+        ideal_number: 20,
+        current_number: 13,
+        contributions: []
+    },
+]
 
 export const PROJECTS: Project[] = [
   {
@@ -24,7 +37,7 @@ export const PROJECTS: Project[] = [
     neededVol: 11,
     thumbnail: `./../../assets/thumbnails/piedmont_park.jpg`,
     resources_deadline: ``,
-    resources: []
+    resources: piedmont_park_resources
   },
   {
     id: 1,
@@ -99,3 +112,4 @@ export const PROJECTS: Project[] = [
     resources: []
   }
 ];
+

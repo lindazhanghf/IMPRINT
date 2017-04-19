@@ -43,4 +43,10 @@ export const CATEGORIES: Category[] = [
     type: true,
     description: `e.g. Teaching safety practices, awareness talks, etc.`
   },
+  {
+    id: 7,
+    name: 'Park',
+    type: false,
+    description: ``
+  }
 ];
