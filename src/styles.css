@@ -177,8 +177,8 @@ div.progress {
 div.progress-bar {
     display: block;
     margin: 0 auto;
-    background-color: #6DE4D0;
     height: 100%;
+    background-color: #00B76B;
     float: left;
     font-size: 14px;
     font-family: 'circular-std-book';
@@ -268,3 +268,6 @@ div.tagButtons button:hover {
     padding: 30px;
 }
 
+div.aboutContainer h2 {
+margin-top: 30px
+}
