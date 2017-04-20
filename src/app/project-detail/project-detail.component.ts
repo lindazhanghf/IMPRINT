@@ -17,7 +17,6 @@ import { CategoryService } from './../category.service';
 
 
 export class ProjectDetailComponent implements OnInit {
-  // project: Project;
   @Input() project: Project;
   category: Category;
 
@@ -37,16 +36,6 @@ export class ProjectDetailComponent implements OnInit {
           this.category = category;
         });
       });
-    // this.route.params
-    //   .switchMap((params: Params) => {
-    //     this.project = this.projectService.getProject(+params['id'])
-    //   })
-    //   .subscribe(project => {
-    //     this.project = project;
-    //     this.categoryService.getCategory(this.project.category).then(category => {
-    //       this.category = category;
-    //     });
-    //   });
   }
 
   goBack(): void {

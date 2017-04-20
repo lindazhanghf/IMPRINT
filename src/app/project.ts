@@ -1,5 +1,3 @@
-// import { Resource }         from './resource';
-
 export class Project {
   id: number;
 
@@ -14,6 +12,7 @@ export class Project {
   timeLeft: number; // Days left to sign up
   category: number; // Category ID
   tag: string; // Project tags
+  thumbnail: string; // Path to thumbnail image
 
   media: string; // Related media (pictures, videos, URLS, etc.)
 
@@ -21,20 +20,8 @@ export class Project {
   locationName: string;
   address: string; // Actual address of the event
 
-  progress: number; // Percentage of progress (0 - 1.0)
-  neededVol: number; // Number of volunteers needed
-  thumbnail: string; // Path to thumbnail image
-
-  // Resources needed... (resources class)
   resources_deadline: string;
   resources: Resource[];
-}
-
-export class Address {
-  street = '';
-  city   = '';
-  state  = '';
-  zip    = '';
 }
 
 export class Contribution {
@@ -44,7 +31,7 @@ export class Contribution {
 
 export class Resource {
   id: number;
-  project: number; // ID of the project it belongs to
+  // project: number; // ID of the project it belongs to
   type: string; // 3 types: funding, volunteer, or donations
   name: string; // Name of resources, e.g. Food&Drink, Room reservation fee (purpose of funding)
 

@@ -1,0 +1,127 @@
+<div *ngIf="isDetail">
+ <div *ngIf="progress_volunteer" >
+  <div class="volunteer row">
+    <div class="col-md-9"  style="margin-top: 23px;">
+      <div class="progress">
+        <div class="progress-bar"
+          style="min-width: 0;"
+          role="progressbar"
+          [ngClass]="'progress-bar'"
+          [ngStyle]="{'width': (progress_volunteer) + '%', transition: transition}"
+          aria-valuemin="0"
+          [attr.aria-valuenow]="value"
+          [attr.aria-valuetext]="(progress_volunteer).toFixed(0) + '%'"
+          attr.aria-valuemax="100"
+          >{{progress_volunteer}}%
+            <ng-content></ng-content>
+        </div>
+      </div>
+    </div>
+    <button  style="margin-left: 2px; float:right;" class="helpButton">HELP OUT</button>
+  </div>
+  <span>{{needed_volunteer}} more volunteers needed!</span>
+ </div>
+
+ <div *ngIf="progress_funding" >
+  <div class="funding row">
+    <div class="col-md-9"  style="margin-top: 23px;">
+      <div class="progress">
+        <div class="progress-bar"
+          style="min-width: 0;"
+          role="progressbar"
+          [ngClass]="'progress-bar'"
+          [ngStyle]="{'width': (progress_funding) + '%', transition: transition}"
+          aria-valuemin="0"
+          [attr.aria-valuenow]="value"
+          [attr.aria-valuetext]="(progress_funding).toFixed(0) + '%'"
+          attr.aria-valuemax="100"
+          >{{progress_funding}}%
+            <ng-content></ng-content>
+        </div>
+      </div>
+    </div>
+    <button  style="margin-left: 2px; float:right;" class="helpButton">HELP OUT</button>
+  </div>
+  <span>{{needed_funding}} more fundings needed!</span>
+ </div>
+
+ <div *ngIf="progress_donation" >
+  <div class="donations row">
+    <div class="col-md-9"  style="margin-top: 23px;">
+      <div class="progress">
+        <div class="progress-bar"
+          style="min-width: 0;"
+          role="progressbar"
+          [ngClass]="'progress-bar'"
+          [ngStyle]="{'width': (progress_donation) + '%', transition: transition}"
+          aria-valuemin="0"
+          [attr.aria-valuenow]="value"
+          [attr.aria-valuetext]="(progress_donation).toFixed(0) + '%'"
+          attr.aria-valuemax="100"
+          >{{progress_donation}}%
+            <ng-content></ng-content>
+        </div>
+      </div>
+    </div>
+    <button  style="margin-left: 2px; float:right;" class="helpButton">HELP OUT</button>
+  </div>
+  <span>{{needed_donation}} more donations needed!</span>
+ </div>
+
+</div> <!-- *ngIf="isDetail" -->
+
+<!-- Simpler display for homepage, explore projects -->
+<div *ngIf="!isDetail">
+
+  <div *ngIf="progress_volunteer" class="volunteer row">
+    <div class="progress">
+      <div class="progress-bar"
+        style="min-width: 0;"
+        role="progressbar"
+        [ngClass]="'progress-bar'"
+        [ngStyle]="{'width': (progress_volunteer) + '%', transition: transition}"
+        aria-valuemin="0"
+        [attr.aria-valuenow]="value"
+        [attr.aria-valuetext]="(progress_volunteer).toFixed(0) + '%'"
+        attr.aria-valuemax="100"
+        >{{progress_volunteer}}%
+          <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="progress_funding" class="funding row">
+    <div class="progress">
+      <div class="progress-bar"
+        style="min-width: 0;"
+        role="progressbar"
+        [ngClass]="'progress-bar'"
+        [ngStyle]="{'width': (progress_funding) + '%', transition: transition}"
+        aria-valuemin="0"
+        [attr.aria-valuenow]="value"
+        [attr.aria-valuetext]="(progress_funding).toFixed(0) + '%'"
+        attr.aria-valuemax="100"
+        >{{progress_funding}}%
+          <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="progress_donation" class="donation row">
+    <div class="progress">
+      <div class="progress-bar"
+        style="min-width: 0;"
+        role="progressbar"
+        [ngClass]="'progress-bar'"
+        [ngStyle]="{'width': (progress_donation) + '%', transition: transition}"
+        aria-valuemin="0"
+        [attr.aria-valuenow]="value"
+        [attr.aria-valuetext]="(progress_donation).toFixed(0) + '%'"
+        attr.aria-valuemax="100"
+        >{{progress_donation}}%
+          <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+
+</div> <!-- *ngIf="isDetail" -->

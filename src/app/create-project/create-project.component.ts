@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import {NgForm}                   from '@angular/forms';
-// import { ActivatedRoute }   from '@angular/router';
 import { Location }                 from '@angular/common';
 import 'rxjs/add/operator/switchMap';
 
@@ -9,7 +8,6 @@ import { ProjectService } from './../project.service';
 import { Project, Resource } from './../project';
 import { Category } from './../category';
 import { CategoryService } from './../category.service';
-// import { Resource }         from './../resource';
 
 @Component({
   selector: 'create-project',
@@ -35,8 +33,6 @@ export class CreateProjectComponent implements OnInit {
     neighborhood: 0, // Neighborhood ID
     locationName: '',
     address: '', // Actual address of the event
-    progress: 0, // Percentage of progress (0 - 1.0)
-    neededVol: 0, // Number of volunteers needed
     thumbnail: '', // Path to thumbnail image
     resources_deadline: '',
     resources: []
@@ -52,10 +48,8 @@ export class CreateProjectComponent implements OnInit {
   curr_id: number = 0;
   new_resource: Resource = {
     id: 0,
-    project: 0,
     type: '',
     name: '',
-
     ideal_number: 0,
     current_number: 0,
     contributions: []
@@ -84,7 +78,6 @@ export class CreateProjectComponent implements OnInit {
 
   newResource(type : string) : void {
     this.new_resource.id = this.curr_id;
-    this.new_resource.project = this.project.id;
     this.new_resource.type = type;
     this.new_resource.name = '';
     this.new_resource.ideal_number = 0;
@@ -92,7 +85,6 @@ export class CreateProjectComponent implements OnInit {
     this.new_resource.contributions = [];
 
     this.project.resources.push(
-      // JSON.parse(JSON.stringify(this.new_resource))
       this.deep_copy(this.new_resource)
       );
     this.curr_id = this.curr_id + 1;
@@ -132,13 +124,13 @@ export class CreateProjectComponent implements OnInit {
   deep_copy(resource): Resource {
     var resource_copy : Resource = {
         id: resource.id,
-        project: resource.project,
         type: resource.type,
         name: resource.name,
         ideal_number: resource.ideal_number,
         current_number: resource.current_number,
         contributions: []
     }
-    return resource_copy
+    return resource_copy;
+    // JSON.parse(JSON.stringify(this.new_resource))
   }
 }

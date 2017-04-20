@@ -9,7 +9,6 @@
       <div style="padding-left: 10px;">
         <h3>Category</h3>
         <p>Select a category that best represents your project:</p>
-        <!-- <input [(ngModel)]="project.title" placeholder="Select Category" /> -->
         <div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             {{category.name}}
@@ -96,6 +95,10 @@
           <img src="./../../assets/icons/Add.svg" style="width:20px;height:20px;"> New resource
         </div>
       </div>
+      <div style="padding-top: 20px"></div>
+      <button (click)="previousStep()">Back</button>
+      <button (click)="nextStep()">Preview Project</button>
+    </div>
 
     <div *ngIf="step==3">
       <h2> Step: {{step}} Preview Project</h2>

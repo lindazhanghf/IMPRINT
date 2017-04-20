@@ -1,14 +1,50 @@
-import { Project } from './../project';
-import { Resource } from './../resource';
+import { Project, Resource } from './../project';
 
-const piedmont_park_resources: Resource[] = [
+const piedmont_park_required_resources: Resource[] = [
     {
         id: 0,
-        project: 0,
         type: "volunteer",
         name: "Clean-up",
         ideal_number: 20,
         current_number: 13,
+        contributions: []
+    },
+]
+const inman_park_required_resources: Resource[] = [
+    {
+        id: 0,
+        type: "volunteer",
+        name: "Attandant",
+        ideal_number: 30,
+        current_number: 14,
+        contributions: []
+    },
+]
+const botanic_garden_required_resources: Resource[] = [
+    {
+        id: 0,
+        type: "volunteer",
+        name: "Attandant",
+        ideal_number: 15,
+        current_number: 14,
+        contributions: []
+    },
+    {
+        id:1,
+        type: "donation",
+        name: "Bring bowls and cups!",
+        ideal_number: 30,
+        current_number: 18,
+        contributions: []
+    }
+]
+const womens_march_required_resources: Resource[] = [
+    {
+        id: 0,
+        type: "volunteer",
+        name: "Attandant",
+        ideal_number: 1000,
+        current_number: 500,
         contributions: []
     },
 ]
@@ -33,11 +69,9 @@ export const PROJECTS: Project[] = [
     neighborhood: 0,
     locationName: `Piedmont Park`,
     address: "400 Park Dr NE, Atlanta, GA 30309/ 14th Street Entrance",
-    progress: 0.7,
-    neededVol: 11,
     thumbnail: `./../../assets/thumbnails/piedmont_park.jpg`,
     resources_deadline: ``,
-    resources: piedmont_park_resources
+    resources: piedmont_park_required_resources
   },
   {
     id: 1,
@@ -57,11 +91,9 @@ export const PROJECTS: Project[] = [
     neighborhood: 0,
     locationName: `Inman Park`,
     address: "400 Park Dr NE, Atlanta, GA 30309/ 14th Street Entrance",
-    progress: 0.7,
-    neededVol: 11,
     thumbnail: `./../../assets/thumbnails/bikes.png`,
     resources_deadline: ``,
-    resources: []
+    resources: inman_park_required_resources
   },
   {
     id: 2,
@@ -82,11 +114,9 @@ export const PROJECTS: Project[] = [
     neighborhood: 0,
     locationName: 'Atlanta Botanical Garden',
     address: "400 Park Dr NE, Atlanta, GA 30309/ 14th Street Entrance",
-    progress: 0.8,
-    neededVol: 11,
     thumbnail: `./../../assets/thumbnails/botanic_garden.png`,
     resources_deadline: ``,
-    resources: []
+    resources: botanic_garden_required_resources
   },
   {
     id: 3,
@@ -105,11 +135,9 @@ export const PROJECTS: Project[] = [
     neighborhood: 0,
     locationName: 'City Hall',
     address: "400 Park Dr NE, Atlanta, GA 30309/ 14th Street Entrance",
-    progress: 0.9,
-    neededVol: 11,
     thumbnail: `./../../assets/thumbnails/womens_march.png`,
     resources_deadline: ``,
-    resources: []
+    resources: womens_march_required_resources
   }
 ];
 

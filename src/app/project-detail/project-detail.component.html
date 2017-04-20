@@ -13,7 +13,6 @@
           <span>{{project.date}}</span> <br />
           <span>{{project.timeOfEvent}}</span>
         </div><br>
-
         <div class="locationDiv">
           <img id="locationIcon" src="./../../assets/icons/pin2.png">
           <span>{{project.locationName}}</span><br />
@@ -22,31 +21,18 @@
         <div class="timeDiv">
           <img id="timeIcon" src="./../../assets/icons/clock.png">
           <span>{{project.timeLeft}} days left to sign up</span>
-        </div><br><br>
-        <div class="progress">
-          <div class="progress-bar"
-            style="min-width: 0;"
-            role="progressbar"
-            [ngClass]="'progress-bar'"
-            [ngStyle]="{width: (project.progress * 100) + '%', transition: transition}"
-            aria-valuemin="0"
-            [attr.aria-valuenow]="value"
-            [attr.aria-valuetext]="(project.progress * 100).toFixed(0) + '%'"
-            attr.aria-valuemax="100"
-            >{{project.progress * 100}}%
-              <ng-content></ng-content>
-            </div>
-          </div>
-        <span>{{project.neededVol}} more volunteers needed!</span>
-        <br>
-        <button class="helpButton">HELP OUT</button>
+        </div>
+
+        <progress-bars [isDetail]="true" [resources]="project.resources"></progress-bars>
+
       </div>
     </div>
+
     <h3 class="detailsHeader">Details</h3>
     <span class="prjDesc">{{project.description}}</span>
     <!--   <div>
       <label>Comment: </label>
-      <input [(ngModel)]="project.title" placeholder="title" />
+      <input [(ngModel)]="project.title" placeholder="Enter comment" />
     </div> -->
     <h3 class="tagsHeader">Tags</h3>
     <div class="tagButtons">

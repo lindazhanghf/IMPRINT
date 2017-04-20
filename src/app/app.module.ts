@@ -14,7 +14,8 @@ import { ProjectDetailComponent } from './project-detail/project-detail.componen
 import { ExploreProjectComponent } from './explore-projects/explore-projects.component';
 import { CreateProjectComponent } from './create-project/create-project.component';
 import { RegistrationComponent } from './registration/registration.component';
-import { AboutComponent} from './about/about.component';
+import { AboutComponent } from './about/about.component';
+import { ProgressBarsComponent } from './progress-bars/progress-bars.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AboutComponent} from './about/about.component';
     ProjectDetailComponent,
     CreateProjectComponent,
     RegistrationComponent,
-    AboutComponent
+    AboutComponent,
+    ProgressBarsComponent
   ],
   imports: [
     BrowserModule,

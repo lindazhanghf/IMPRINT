@@ -47,6 +47,6 @@ export const CATEGORIES: Category[] = [
     id: 7,
     name: 'Park',
     type: false,
-    description: ``
+    description: `TAG EXAMPLE`
   }
 ];
