@@ -1,4 +1,5 @@
-<div *ngIf="isDetail"> <div *ngIf="progress_volunteer" >
+<div *ngIf="isDetail">
+ <div *ngIf="progress_volunteer" >
   <div class="volunteer row">
     <div class="col-md-9"  style="margin-top: 23px;">
       <div class="progress">
@@ -20,6 +21,7 @@
   </div>
   <span>{{needed_volunteer}} more volunteers needed!</span>
  </div>
+
  <div *ngIf="progress_funding" >
   <div class="funding row">
     <div class="col-md-9"  style="margin-top: 23px;">
@@ -42,6 +44,7 @@
   </div>
   <span>{{needed_funding}} more fundings needed!</span>
  </div>
+
  <div *ngIf="progress_donation" >
   <div class="donations row">
     <div class="col-md-9"  style="margin-top: 23px;">
@@ -85,6 +88,7 @@
           <ng-content></ng-content>
       </div>
     </div>
+  </div>
 
   <div *ngIf="progress_funding" class="funding row">
     <div class="progress">
@@ -101,6 +105,7 @@
           <ng-content></ng-content>
       </div>
     </div>
+  </div>
 
   <div *ngIf="progress_donation" class="donation row">
     <div class="progress">
@@ -117,5 +122,6 @@
           <ng-content></ng-content>
       </div>
     </div>
+  </div>
 
 </div> <!-- *ngIf="isDetail" -->
