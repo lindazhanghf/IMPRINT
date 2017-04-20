@@ -15,20 +15,7 @@
       <img src="{{project.thumbnail}}">
       <h2>{{project.title}}</h2><br>
       <span>{{project.name}}</span>
-        <div class="progress">
-          <div class="progress-bar"
-            style="min-width: 0;"
-            role="progressbar"
-            [ngClass]="'progress-bar'"
-            [ngStyle]="{width: (project.progress * 100) + '%', transition: transition}"
-            aria-valuemin="0"
-            [attr.aria-valuenow]="value"
-            [attr.aria-valuetext]="(project.progress * 100).toFixed(0) + '%'"
-            attr.aria-valuemax="100"
-            >{{project.progress * 100}}%
-              <ng-content></ng-content>
-            </div>
-        </div>
+        <progress-bars [isDetail]="false"  [resources]="project.resources"></progress-bars>
          <p>{{project.date}}</p>
     </div>
   </div>
@@ -43,20 +30,7 @@
       <img src="{{project.thumbnail}}">
       <h2>{{project.title}}</h2><br>
       <span>{{project.name}}</span>
-        <div class="progress">
-          <div class="progress-bar"
-            style="min-width: 0;"
-            role="progressbar"
-            [ngClass]="'progress-bar'"
-            [ngStyle]="{width: (project.progress * 100) + '%', transition: transition}"
-            aria-valuemin="0"
-            [attr.aria-valuenow]="value"
-            [attr.aria-valuetext]="(project.progress * 100).toFixed(0) + '%'"
-            attr.aria-valuemax="100"
-            >{{project.progress * 100}}%
-              <ng-content></ng-content>
-            </div>
-        </div>
+        <progress-bars [isDetail]="false"  [resources]="project.resources"></progress-bars>
          <p>{{project.date}}</p>
     </div>
   </div>
@@ -71,20 +45,7 @@
       <img src="{{project.thumbnail}}">
       <h2>{{project.title}}</h2><br>
       <span>{{project.name}}</span>
-        <div class="progress">
-          <div class="progress-bar"
-            style="min-width: 0;"
-            role="progressbar"
-            [ngClass]="'progress-bar'"
-            [ngStyle]="{width: (project.progress * 100) + '%', transition: transition}"
-            aria-valuemin="0"
-            [attr.aria-valuenow]="value"
-            [attr.aria-valuetext]="(project.progress * 100).toFixed(0) + '%'"
-            attr.aria-valuemax="100"
-            >{{project.progress * 100}}%
-              <ng-content></ng-content>
-            </div>
-        </div>
+        <progress-bars [isDetail]="false"  [resources]="project.resources"></progress-bars>
          <p>{{project.date}}</p>
     </div>
   </div>
