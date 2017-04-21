@@ -17,7 +17,7 @@
         </div>
       </div>
     </div>
-    <button  style="margin-left: 2px; float:right;" class="helpButton">HELP OUT</button>
+    <button (click)="helpOut('volunteer')" style="margin-left: 2px; float:right;" class="helpButton">HELP OUT</button>
   </div>
   <span>{{needed_volunteer}} more volunteers needed!</span>
  </div>
@@ -40,7 +40,7 @@
         </div>
       </div>
     </div>
-    <button  style="margin-left: 2px; float:right;" class="helpButton">HELP OUT</button>
+    <button (click)="helpOut('funding')" style="margin-left: 2px; float:right;" class="helpButton">HELP OUT</button>
   </div>
   <span>{{needed_funding}} more fundings needed!</span>
  </div>
@@ -63,7 +63,7 @@
         </div>
       </div>
     </div>
-    <button  style="margin-left: 2px; float:right;" class="helpButton">HELP OUT</button>
+    <button (click)="helpOut('donation')" style="margin-left: 2px; float:right;" class="helpButton">HELP OUT</button>
   </div>
   <span>{{needed_donation}} more donations needed!</span>
  </div>
