@@ -281,3 +281,17 @@ text-align: left;
 div.Playbooktitle p {
   font-size-adjust: 20px;
 }
+div.grid.grid-pad button {
+  background-color: #fff;
+  color: #000;
+  font-family: 'circular-std-book';
+  padding: 10px;
+  margin-bottom: 10px;
+  border-width: 1px;
+  border-style: solid;
+  margin-right: 1%;
+}
+div.grid.grid-pad button:hover {
+  background-color: #000;
+  color: #fff;
+}
