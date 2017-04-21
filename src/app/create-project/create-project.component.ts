@@ -70,10 +70,7 @@ export class CreateProjectComponent implements OnInit {
 
   ngOnInit(): void {
     this.project.id = this.projectService.getListLength();
-    this.categoryService.getCategories().then(categories => {
-      this.categories = categories;
-      console.log(categories);
-    });
+    this.categories = this.categoryService.getCategories();
   }
 
   newResource(type : string) : void {

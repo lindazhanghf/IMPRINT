@@ -17,8 +17,14 @@ import { CategoryService } from './../category.service';
 
 
 export class ProjectDetailComponent implements OnInit {
-  @Input() project: Project;
-  category: Category;
+  @Input() input_project: Project;
+  project: Project;
+  category: Category = {
+    id: -1,
+    name: "Select Category",
+    type: true,
+    description: ""
+  };
 
   constructor(
     private projectService: ProjectService,
@@ -28,14 +34,20 @@ export class ProjectDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.route.params
-      .switchMap((params: Params) => this.projectService.getProject(+params['id']))
-      .subscribe(project => {
-        this.project = project;
-        this.categoryService.getCategory(this.project.category).then(category => {
-          this.category = category;
+    var self = this;
+    if (this.input_project == undefined) {
+      this.route.params
+        .switchMap((params: Params) => this.projectService.getProject(+params['id']))
+        .subscribe(project => {
+          self.project = project;
+          self.category = this.categoryService.getCategory(this.project.category);
         });
-      });
+    } else {
+      this.project = this.input_project;
+      this.input_project = null;
+      // console.log(this.project);
+      this.category = this.categoryService.getCategory(this.project.category);
+    }
   }
 
   goBack(): void {

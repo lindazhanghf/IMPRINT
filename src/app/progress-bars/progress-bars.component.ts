@@ -55,8 +55,6 @@ export class ProgressBarsComponent implements OnInit {
       var key = ['progress_', type].join('')
       this[key] = Math.round(current_sum[type]/ideal_sum[type]*100);
 
-      if (!this.isDetail)
-        return;
       key = ['needed_', type].join('')
       this[key] = ideal_sum[type]-current_sum[type];
     })

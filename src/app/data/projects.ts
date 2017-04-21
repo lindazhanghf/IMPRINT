@@ -19,6 +19,14 @@ const inman_park_required_resources: Resource[] = [
         current_number: 14,
         contributions: []
     },
+    {
+        id: 0,
+        type: "funding",
+        name: "Attandant",
+        ideal_number: 30,
+        current_number: 0,
+        contributions: []
+    },
 ]
 const botanic_garden_required_resources: Resource[] = [
     {

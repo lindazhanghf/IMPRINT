@@ -5,19 +5,11 @@ import { CATEGORIES } from './data/categories';
 
 @Injectable()
 export class CategoryService {
-  getCategories(): Promise<Category[]> {
-    return Promise.resolve(CATEGORIES);
+  getCategories(): Category[] {
+    return CATEGORIES;
   }
 
-  getCategory(id: number): Promise<Category> {
-    return this.getCategories()
-               .then(categories => categories.find(category => category.id === id));
+  getCategory(id: number): Category {
+    return CATEGORIES.find(category => category.id === id);
   }
-  // getCategories(): Category[] {
-  //   return CATEGORIES;
-  // }
-
-  // getCategory(id: number): Category {
-  // 	return CATEGORIES.find(category => category.id === id)
-  // }
 }

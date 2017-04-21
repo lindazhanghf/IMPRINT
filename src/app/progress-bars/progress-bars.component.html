@@ -1,5 +1,5 @@
 <div *ngIf="isDetail">
- <div *ngIf="progress_volunteer" >
+ <div *ngIf="(needed_volunteer)||(progress_volunteer==100)" >
   <div class="volunteer row">
     <div class="col-md-9"  style="margin-top: 23px;">
       <div class="progress">
@@ -17,12 +17,12 @@
         </div>
       </div>
     </div>
-    <button (click)="helpOut('volunteer')" style="margin-left: 2px; float:right;" class="helpButton">HELP OUT</button>
+    <button [disabled]="!needed_volunteer" (click)="helpOut('volunteer')" style="margin-left: 2px; float:right;" class="helpButton">HELP OUT</button>
   </div>
   <span>{{needed_volunteer}} more volunteers needed!</span>
  </div>
 
- <div *ngIf="progress_funding" >
+ <div *ngIf="(needed_funding)||(progress_funding==100)" >
   <div class="funding row">
     <div class="col-md-9"  style="margin-top: 23px;">
       <div class="progress">
@@ -40,12 +40,12 @@
         </div>
       </div>
     </div>
-    <button (click)="helpOut('funding')" style="margin-left: 2px; float:right;" class="helpButton">HELP OUT</button>
+    <button [disabled]="!needed_funding" (click)="helpOut('funding')" style="margin-left: 2px; float:right;" class="helpButton">HELP OUT</button>
   </div>
   <span>{{needed_funding}} more fundings needed!</span>
  </div>
 
- <div *ngIf="progress_donation" >
+ <div *ngIf="(needed_donation)||(progress_donation==100)" >
   <div class="donations row">
     <div class="col-md-9"  style="margin-top: 23px;">
       <div class="progress">
@@ -63,7 +63,7 @@
         </div>
       </div>
     </div>
-    <button (click)="helpOut('donation')" style="margin-left: 2px; float:right;" class="helpButton">HELP OUT</button>
+    <button [disabled]="!needed_donation" (click)="helpOut('donation')" style="margin-left: 2px; float:right;" class="helpButton">HELP OUT</button>
   </div>
   <span>{{needed_donation}} more donations needed!</span>
  </div>
@@ -73,7 +73,7 @@
 <!-- Simpler display for homepage, explore projects -->
 <div *ngIf="!isDetail">
 
-  <div *ngIf="progress_volunteer" class="volunteer row">
+  <div *ngIf="(needed_volunteer)||(progress_volunteer==100)" class="volunteer row">
     <div class="progress">
       <div class="progress-bar"
         style="min-width: 0;"
@@ -90,7 +90,7 @@
     </div>
   </div>
 
-  <div *ngIf="progress_funding" class="funding row">
+  <div *ngIf="(needed_funding)||(progress_funding==100)" class="funding row">
     <div class="progress">
       <div class="progress-bar"
         style="min-width: 0;"
@@ -107,7 +107,7 @@
     </div>
   </div>
 
-  <div *ngIf="progress_donation" class="donation row">
+  <div *ngIf="(needed_donation)||(progress_donation==100)" class="donation row">
     <div class="progress">
       <div class="progress-bar"
         style="min-width: 0;"
