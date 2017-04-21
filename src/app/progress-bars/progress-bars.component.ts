@@ -49,11 +49,11 @@ export class ProgressBarsComponent implements OnInit {
       this[key] = ideal_sum[type]-current_sum[type];
     })
 
-  console.log("progress_volunteer = " + this.progress_volunteer);
-  console.log("needed_volunteer = " + this.needed_volunteer);
-  console.log("progress_funding = " + this.progress_funding);
-  console.log("needed_funding = " + this.needed_funding);
-  console.log("progress_donation = " + this.progress_donation);
-  console.log("needed_donation = " + this.needed_donation);
+  // console.log("progress_volunteer = " + this.progress_volunteer);
+  // console.log("needed_volunteer = " + this.needed_volunteer);
+  // console.log("progress_funding = " + this.progress_funding);
+  // console.log("needed_funding = " + this.needed_funding);
+  // console.log("progress_donation = " + this.progress_donation);
+  // console.log("needed_donation = " + this.needed_donation);
   }
 }

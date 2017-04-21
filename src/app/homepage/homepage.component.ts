@@ -9,7 +9,7 @@ import { ProjectService } from './../project.service';
 })
 
 export class HomepageComponent implements OnInit {
-
+  loggedIn: boolean;
   projects: Project[] = [];
 
   constructor(private projectService: ProjectService) { }

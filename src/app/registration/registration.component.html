@@ -14,10 +14,7 @@
         Password: <br>
         <input type="text" name="password" placeholder=" "><br><br>
       </form>
-      <!--<nav>-->
-        <!--<button routerLink="/home" routerLinkActive="active" class="logo">Login</button>-->
-      <!--</nav>-->
-      <button routerLink="/home" routerLinkActive="active" class="logo">Login</button>
+      <button routerLink="/home" routerLinkActive="active" class="logo" (click)="logIn()">Login</button>
       <button (click)="nextStep()">Sign Up</button>
     </div>
 
@@ -82,7 +79,7 @@
       </form>
       <br><br>
       <button (click)="previousStep()">Back</button>
-      <button (click)="returnLogin()">Done</button>
+      <button routerLink="/home" routerLinkActive="active" class="logo" (click)="logIn()">Done</button>
       <br><br>
       <div class="progress">
         <div class="progress-bar" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="3" style="width:100%">
@@ -113,7 +110,7 @@
       <br><br>
 
       <button (click)= "returnSignUp()">Back</button>
-      <button (click)="nextStep()">Done</button>
+      <button (click)="nextStep()" >Done</button>
 
       <br><br>
       <div class="progress">
@@ -131,7 +128,7 @@
       <br>
       Thank you!
       <br><br>
-      <button (click)="returnLogin()">Done</button>
+      <button routerLink="/home" routerLinkActive="active" class="logo">Done</button>
       <br><br>
       <div class="progress">
         <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:100%">

@@ -4,6 +4,9 @@
     <a routerLink="/explore" routerLinkActive="active">Explore Projects</a>
     <a routerLink="/create" routerLinkActive="active">Create a Project</a>
     <a routerLink="/about" routerLinkActive="active">About</a>
-  	<a routerLink="/registration" routerLinkActive="active">Sign Up/Log In</a>
+    <a  *ngIf="!user_service.current_user" routerLink="/registration" routerLinkActive="active">Sign Up/Log In</a>
+    <a *ngIf="user_service.current_user" >
+        <img border="0" src="{{user_service.current_user.profile_pic}}" width="20" height="20">
+    </a>
 </nav>
 <router-outlet></router-outlet>

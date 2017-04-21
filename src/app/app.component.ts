@@ -1,18 +1,24 @@
-import { Component } from '@angular/core';
-import { OnInit } from '@angular/core';
-// import { Hero } from './hero';
-// import { HeroService } from './hero.service';
+import { Component, Input, OnInit } from '@angular/core';
+import { User } from './data/user';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: [ '../assets/css/bootstrap.min.css', './app.component.css'],
-  // template: `<h1>{{title}}</h1><h2>{{hero}} details!</h2>  `
-
+  styleUrls: [ './app.component.css'],
 })
 
-export class AppComponent {
-  title = 'Tour of Heroes';
+export class AppComponent implements OnInit {
+  user_service: UserService = null;
 
+  constructor(
+    private userService: UserService,
+  ) {}
+
+  ngOnInit(): void {
+    this.user_service = this.userService
+    // console.log(this.userService);
+    // console.log('CurrUser: ' + this.user);
+  }
 }
 

@@ -9,6 +9,7 @@ import { AppRoutingModule }     from './app-routing.module';
 
 import { ProjectService } from './project.service';
 import { CategoryService } from './category.service';
+import { UserService } from './user.service';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { ExploreProjectComponent } from './explore-projects/explore-projects.component';
@@ -34,7 +35,7 @@ import { ProgressBarsComponent } from './progress-bars/progress-bars.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [ProjectService, CategoryService],
+  providers: [ProjectService, CategoryService, UserService],
   bootstrap: [AppComponent]
 })
 

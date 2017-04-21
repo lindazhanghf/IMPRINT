@@ -43,8 +43,8 @@ const womens_march_required_resources: Resource[] = [
         id: 0,
         type: "volunteer",
         name: "Attandant",
-        ideal_number: 1000,
-        current_number: 500,
+        ideal_number: 100,
+        current_number: 78,
         contributions: []
     },
 ]

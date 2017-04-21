@@ -4,7 +4,6 @@ export class Project {
   title: string;
   userID: number; // User ID
   userName: string; // User's name
-
   description: string;
 
   date: string;
