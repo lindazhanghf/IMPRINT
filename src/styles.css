@@ -354,3 +354,7 @@ div.signUp button, button, div.button {
 div.dropdown button, div.saveDiv.button.saveAndContinue p{
   color: #fff;
 }
+#playbook {
+  font-family: 'whitneyHTF-semibold';
+  font-size: 21px;
+}
