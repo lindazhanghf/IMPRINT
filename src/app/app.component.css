@@ -75,7 +75,7 @@ nav a:hover {
 nav .logo {
   color: #000000;
   font-size: 22px;
-  font-family: "circular-std-medium";
+  font-family: "whitneyHTF-semibold";
 }
 nav input {
   border-style: solid;
@@ -84,7 +84,7 @@ nav input {
 }
 nav input::placeholder {
   /*padding: 5px;*/
-  font-family: 'circular-std-book';
+  font-family: 'whitneyHTF-light';
   color: #969696;
   font-size: 13px;
 }
@@ -96,7 +96,7 @@ nav input[name="projectSearch"] {
   margin-left: 30px;
   margin-right: 5px;
   width: 225px;
-  font-family: 'circular-std-book';
+  font-family: 'whitneyHTF-light';
   padding: 7px;
 }
 nav input a {

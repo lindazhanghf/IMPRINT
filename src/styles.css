@@ -11,11 +11,35 @@
     font-family: 'circular-std-bold';
     src: url('assets/fonts/circular-std-bold.otf'); /* Legacy iOS */
 }
+@font-face {
+    font-family: 'whitneyHTF-light';
+    src: url('assets/fonts/WhitneyHTF-Light.ttf'); /* Legacy iOS */
+}
+@font-face {
+    font-family: 'whitneyHTF-book';
+    src: url('assets/fonts/WhitneyHTF-Book.otf'); /* Legacy iOS */
+}
+@font-face {
+    font-family: 'whitneyHTF-medium';
+    src: url('assets/fonts/WhitneyHTF-Medium.ttf'); /* Legacy iOS */
+}
+@font-face {
+    font-family: 'whitneyHTF-semibold';
+    src: url('assets/fonts/WhitneyHTF-SemiBold.otf'); /* Legacy iOS */
+}
+@font-face {
+    font-family: 'whitneyHTF-bold';
+    src: url('assets/fonts/WhitneyHTF-Bold.otf'); /* Legacy iOS */
+}
+@font-face {
+    font-family: 'whitneyHTF-black';
+    src: url('assets/fonts/WhitneyHTF-Black.otf'); /* Legacy iOS */
+}
 html {
   padding-bottom: 75px;
 }
 body {
-    font-family: 'circular-std-book';
+    font-family: 'whitneyHTF-book';
     max-width: 100%;
     overflow-x: hidden;
     margin-left: 60px;
@@ -42,16 +66,17 @@ nav a {
     padding: 5px 20px;
     color: #000000;
 }
-nav .logo {
+a.logo.active {
     padding-top: 7.5px;
     color: #000000;
+    font-family: 'whitneyHTF-bold';
 }
 nav._ngcontent-c0, a.active._ngcontent-c0 {
     color: #000000;
     padding-left: 130px;
 }
 .h2, h2 {
-    font-family: 'circular-std-book';
+    font-family: 'whitneyHTF-book';
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 0px;
@@ -61,7 +86,7 @@ nav._ngcontent-c0, a.active._ngcontent-c0 {
     font-size: 28px;
 }
 #motto {
-    font-family: 'circular-std-bold';
+    font-family: 'whitneyHTF-semibold';
     font-size: 40px;
     margin-left: 0px;
     margin-top: 50px;
@@ -99,7 +124,7 @@ div.col-lg-4 {
 .col-lg-4 input[name="projectSearch2"] {
     margin-left: 15px;
     width: 475px;
-    font-family: 'circular-std-book';
+    font-family: 'whitneyHTF-light';
 }
 .col-lg-4 input[name="neighSearch"] {
     width: 225px;
@@ -120,7 +145,7 @@ div.col-lg-4 {
 .h1, h1 {
     margin-top: 50px;
     margin-left: 20px;
-    font-family: "circular-std-medium";
+    font-family: "whitneyHTF-medium";
 }
 h1.trendingHeader {
   margin-top: 150px;
@@ -180,7 +205,7 @@ div.progress-bar {
     background-color: #00B76B;
     float: left;
     font-size: 14px;
-    font-family: 'circular-std-book';
+    font-family: 'whitneyHTF-book';
     width:90%;
     padding-top: 1px;
 /*    border-style: solid;
@@ -202,7 +227,7 @@ project-detail img {
 }
 project-detail h2 {
   margin-top: 45px;
-  font-family: 'circular-std-medium';
+  font-family: 'whitneyHTF-medium';
   font-size: 48px;
   margin-bottom: 20px;
   text-align: center;
@@ -226,7 +251,7 @@ project-detail #calendarIcon, #locationIcon, #timeIcon {
   width: 40px;
 }
 h3, .h3 {
-  font-family: 'circular-std-medium';
+  font-family: 'whitneyHTF-medium';
   font-size: 36px;
 }
 .detailsHeader {
@@ -240,7 +265,7 @@ h3, .h3 {
 }
 div.tagButtons button {
   background-color: #000;
-  font-family: 'circular-std-book';
+  font-family: 'whitneyHTF-light';
   font-size: 15px;
   color: #fff;
   padding: 12.5px;
@@ -252,7 +277,7 @@ div.tagButtons button:hover {
 }
 .col-md-4 button.helpButton {
   background-color: #000;
-  font-family: 'circular-std-medium';
+  font-family: 'whitneyHTF-medium';
   font-size: 22px;
   color: #fff;
   padding: 15px;
@@ -261,7 +286,7 @@ div.tagButtons button:hover {
 }
 .prjDesc {
   font-size: 16px;
-  font-family: 'circular-std-book';
+  font-family: 'whitneyHTF-light';
 }
 .col-1-4 {
     padding: 30px;
@@ -284,7 +309,7 @@ div.Playbooktitle p {
 div.grid.grid-pad button {
   background-color: #fff;
   color: #000;
-  font-family: 'circular-std-book';
+  font-family: 'whitneyHTF-light';
   padding: 10px;
   margin-bottom: 10px;
   border-width: 1px;
