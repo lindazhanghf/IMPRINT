@@ -291,7 +291,6 @@ div.tagButtons button:hover {
 .col-1-4 {
     padding: 30px;
 }
-
 div.aboutContainer h2 {
 margin-top: 30px;
 text-align: left;
@@ -309,7 +308,7 @@ div.Playbooktitle p {
 div.grid.grid-pad button {
   background-color: #fff;
   color: #000;
-  font-family: 'whitneyHTF-light';
+  font-family: 'whitneyHTF-book';
   padding: 10px;
   margin-bottom: 10px;
   border-width: 1px;
@@ -319,4 +318,17 @@ div.grid.grid-pad button {
 div.grid.grid-pad button:hover {
   background-color: #000;
   color: #fff;
+}
+div.topGrid {
+  margin-left: 2%;
+}
+div.topGrid select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   padding: 10px;
+   padding-left: 15px;
+   padding-right: 5px;
+   font-family: 'whitneyHTF-medium';
+   vertical-align: center;
 }

@@ -1,6 +1,7 @@
 <h1>{{title}}</h1>
 <br><br clear="all" />
 <div class="grid grid-pad">
+  <div class="topGrid">
   <button>Educational</button>
   <button>Environmental</button>
   <button>Public safety</button>
@@ -25,6 +26,7 @@
     <option value="popular">Most Popular</option>
     <option value="recommended">Recommended</option>
   </select>
+  </div>
   <br clear="all" /><br clear="all" /><br clear="all" />
 
   <div *ngFor="let project of projects" [routerLink]="['/detail', project.id]" class="col-md-3">

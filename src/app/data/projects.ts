@@ -76,7 +76,7 @@ export const PROJECTS: Project[] = [
     media: ``,
     neighborhood: 0,
     locationName: `Piedmont Park`,
-    address: "400 Park Dr NE, Atlanta, GA 30309/ 14th Street Entrance",
+    address: "400 Park Dr NE, 14th Street",
     thumbnail: `./../../assets/thumbnails/piedmont_park.jpg`,
     resources_deadline: ``,
     resources: piedmont_park_required_resources
@@ -98,7 +98,7 @@ export const PROJECTS: Project[] = [
     media: ``,
     neighborhood: 0,
     locationName: `Inman Park`,
-    address: "400 Park Dr NE, Atlanta, GA 30309/ 14th Street Entrance",
+    address: "400 Park Dr NE, 14th Street",
     thumbnail: `./../../assets/thumbnails/bikes.png`,
     resources_deadline: ``,
     resources: inman_park_required_resources
@@ -121,7 +121,7 @@ export const PROJECTS: Project[] = [
     media: ``,
     neighborhood: 0,
     locationName: 'Atlanta Botanical Garden',
-    address: "400 Park Dr NE, Atlanta, GA 30309/ 14th Street Entrance",
+    address: "400 Park Dr NE, 14th Street",
     thumbnail: `./../../assets/thumbnails/botanic_garden.png`,
     resources_deadline: ``,
     resources: botanic_garden_required_resources
@@ -142,7 +142,7 @@ export const PROJECTS: Project[] = [
     media: ``,
     neighborhood: 0,
     locationName: 'City Hall',
-    address: "400 Park Dr NE, Atlanta, GA 30309/ 14th Street Entrance",
+    address: "400 Park Dr NE, 14th Street",
     thumbnail: `./../../assets/thumbnails/womens_march.png`,
     resources_deadline: ``,
     resources: womens_march_required_resources
