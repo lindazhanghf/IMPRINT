@@ -46,7 +46,8 @@
         <input [(ngModel)]="project.thumbnail" placeholder="Image URL" />
       </div>
       <br/>
-      <button (click)="nextStep()">Save &amp; Continue</button>
+      <div class="saveDiv">
+      <button style="color:#fff;" class="saveAndContinue"(click)="nextStep()">Save &amp; Continue</button></div>
     </div>
 
     <div *ngIf="step==2">
@@ -96,8 +97,8 @@
         </div>
       </div>
       <div style="padding-top: 20px"></div>
-      <button (click)="previousStep()">Back</button>
-      <button (click)="nextStep()">Preview Project</button>
+      <button style="color:#fff;"(click)="previousStep()">Back</button>
+      <button style="color:#fff;"(click)="nextStep()">Preview Project</button>
     </div>
 
     <div *ngIf="step==3">
@@ -146,8 +147,8 @@
         </div>
  -->
       </div><br/>
-      <button (click)="previousStep()">Back</button>
-      <button (click)="nextStep()" [routerLink]="['/detail', project.id]">Publish Project</button>
+      <button style="color:#fff;" (click)="previousStep()">Back</button>
+      <button style="color:#fff;" (click)="nextStep()" [routerLink]="['/detail', project.id]">Publish Project</button>
     </div>
 
   </div>

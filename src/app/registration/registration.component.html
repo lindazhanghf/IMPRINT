@@ -4,7 +4,7 @@
       <h2>Log in</h2>
       <p>Register?</p>
     </div> -->
-    <div *ngIf="step==1">
+    <div *ngIf="step==1" class="signUp">
       <br><br>
       <h2> Welcome! </h2>
       <hr/>
@@ -14,8 +14,8 @@
         Password: <br>
         <input type="text" name="password" placeholder=" "><br><br>
       </form>
-      <button routerLink="/home" routerLinkActive="active" class="logo" (click)="logIn()">Login</button>
-      <button (click)="nextStep()">Sign Up</button>
+      <button routerLink="/home" routerLinkActive="active" class="login" (click)="logIn()">Login</button>
+      <button class="signup"(click)="nextStep()">Sign Up</button>
     </div>
 
     <div *ngIf="step==2">
@@ -36,7 +36,7 @@
       </form>
       <b>*Required field</b>
       <br><br>
-      Are you a Community Organization? Click <button (click)=adminReg()>HERE</button> to register as an Admin.
+      Are you a Community Organization? Click <button class="hereButton"(click)=adminReg()>HERE</button> to register as an Admin.
       <br><br>
       <button (click)="previousStep()">Back</button>
       <button (click)="nextStep()">Next</button>

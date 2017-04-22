@@ -140,7 +140,7 @@ div.col-lg-4 {
     border: none;
     height: 52.5px;
     font-size: 16px;
-    font-family: 'circular-std-medium';
+    font-family: 'whitneyHTF-medium';
 }
 .h1, h1 {
     margin-top: 50px;
@@ -331,4 +331,26 @@ div.topGrid select {
    padding-right: 5px;
    font-family: 'whitneyHTF-medium';
    vertical-align: center;
+}
+div.signUp button, button, div.button {
+  background-color: #000;
+  font-family: 'whitneyHTF-light';
+  font-size: 15px;
+  color: #fff;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 5px;
+  border: none;
+}
+.hereButton {
+  background-color: #fff;
+  color: #000;
+  font-family: 'whitneyHTF-medium';
+  border-width: 1px;
+  padding: 0px;
+  padding-right: -3px;
+}
+div.dropdown button, div.saveDiv.button.saveAndContinue p{
+  color: #fff;
 }
