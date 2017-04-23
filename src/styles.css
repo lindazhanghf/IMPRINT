@@ -358,3 +358,7 @@ div.dropdown button, div.saveDiv.button.saveAndContinue p{
   font-family: 'whitneyHTF-semibold';
   font-size: 21px;
 }
+div.progress-bars p {
+  text-align: center;
+
+}

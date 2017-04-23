@@ -74,7 +74,35 @@ const workshop_required_resources: Resource[] = [
         type: "funding",
         name: "Attandant",
         ideal_number: 20,
-        current_number: 10,
+        current_number: 16,
+        contributions: []
+    },
+]
+const cityhall_required_resources: Resource[] = [
+    {
+        id: 0,
+        type: "funding",
+        name: "Attandant",
+        ideal_number: 20,
+        current_number: 9,
+        contributions: []
+    },
+]
+const tasteofatl_required_resources: Resource[] = [
+    {
+        id: 0,
+        type: "volunteer",
+        name: "Attandant",
+        ideal_number: 200,
+        current_number: 148,
+        contributions: []
+    },
+    {
+        id: 1,
+        type: "funding",
+        name: "Attandant",
+        ideal_number: 1000,
+        current_number: 395,
         contributions: []
     },
 ]
@@ -226,5 +254,43 @@ export const PROJECTS: Project[] = [
     resources_deadline: ``,
     resources: workshop_required_resources
   },
+    {
+    id: 7,
+    title: `Town Hall Meeting`,
+    userID: 0,
+    userName: 'Pam Locke',
+    description: `Hey all! This worked is geared for students in the computing and design `,
+    date: `Wednesday, May 28th, 2017`,
+    timeOfEvent: '5:00 pm - 6:00 pm',
+    timeLeft: 6,
+    category: 2,
+    tag: 'Meeting, Community',
+    media: ``,
+    neighborhood: 0,
+    locationName: 'City Hall',
+    address: "Atlanta History Center, 560 Peachtree Street",
+    thumbnail: `./../../assets/thumbnails/cityhall.jpg`,
+    resources_deadline: ``,
+    resources: cityhall_required_resources
+  },
+  {
+    id: 8,
+    title: `Taste of Atlanta Food Festival`,
+    userID: 0,
+    userName: 'Sophia Amuraso',
+    description: `Help support local restaurants! There'll be over 200 vendors at this all-day event! `,
+    date: `Saturday, May 28th, 2017`,
+    timeOfEvent: '9:00 am - 6:00 pm',
+    timeLeft: 19,
+    category: 2,
+    tag: 'Food, Community',
+    media: ``,
+    neighborhood: 0,
+    locationName: 'Sandy Springs',
+    address: "1560 Peachtree Street",
+    thumbnail: `./../../assets/thumbnails/tasteofatl.jpg`,
+    resources_deadline: ``,
+    resources: tasteofatl_required_resources
+  }
 ];
 
