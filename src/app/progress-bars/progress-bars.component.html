@@ -17,7 +17,7 @@
         </div>
       </div>
     </div>
-    <button [disabled]="!needed_volunteer" (click)="helpOut('volunteer')" style="margin-left: 2px; float:right;" class="helpButton">HELP OUT</button>
+    <button [disabled]="!needed_volunteer" (click)="helpOut('volunteer')" style="margin-left: 2px; float:right; background-color:#000; color:#fff; font-family:'whitneyHTF-medium'; padding:15px; padding-left:20px; padding-right:20px;" class="helpButton">HELP OUT</button>
   </div>
   <span>{{needed_volunteer}} more volunteers needed!</span>
  </div>
@@ -40,7 +40,7 @@
         </div>
       </div>
     </div>
-    <button [disabled]="!needed_funding" (click)="helpOut('funding')" style="margin-left: 2px; float:right;" class="helpButton">HELP OUT</button>
+    <button [disabled]="!needed_funding" (click)="helpOut('funding')" style="margin-left: 2px; float:right; background-color:#000; color:#fff; font-family:'whitneyHTF-medium'; padding:15px; padding-left:20px; padding-right:20px;" class="helpButton">HELP OUT</button>
   </div>
   <span>{{needed_funding}} more fundings needed!</span>
  </div>
@@ -63,7 +63,7 @@
         </div>
       </div>
     </div>
-    <button [disabled]="!needed_donation" (click)="helpOut('donation')" style="margin-left: 2px; float:right;" class="helpButton">HELP OUT</button>
+    <button [disabled]="!needed_donation" (click)="helpOut('donation')" style="margin-left: 2px; float:right; background-color:#000; color:#fff; font-family:'whitneyHTF-medium'; padding:15px; padding-left:20px; padding-right:20px;" class="helpButton">HELP OUT</button>
   </div>
   <span>{{needed_donation}} more donations needed!</span>
  </div>
@@ -110,7 +110,7 @@
   <div *ngIf="(needed_donation)||(progress_donation==100)" class="donation row">
     <div class="progress">
       <div class="progress-bar"
-        style="min-width: 0;"
+        style="min-width: 0; background-color: #00A4CC;"
         role="progressbar"
         [ngClass]="'progress-bar'"
         [ngStyle]="{'width': (progress_donation) + '%', transition: transition}"
