@@ -27,7 +27,7 @@
     <div class="col-md-9"  style="margin-top: 23px;">
       <div class="progress">
         <div class="progress-bar"
-          style="min-width: 0;"
+          style="min-width: 0; background-color: #F0AA00;"
           role="progressbar"
           [ngClass]="'progress-bar'"
           [ngStyle]="{'width': (progress_funding) + '%', transition: transition}"
@@ -35,7 +35,7 @@
           [attr.aria-valuenow]="value"
           [attr.aria-valuetext]="(progress_funding).toFixed(0) + '%'"
           attr.aria-valuemax="100"
-          >{{progress_funding}}% of funding met
+          >{{progress_funding}}% of max attendees
             <ng-content></ng-content>
         </div>
       </div>
@@ -93,7 +93,7 @@
   <div *ngIf="(needed_funding)||(progress_funding==100)" class="funding row">
     <div class="progress">
       <div class="progress-bar"
-        style="min-width: 0;"
+        style="min-width: 0; background-color: #F0AA00;"
         role="progressbar"
         [ngClass]="'progress-bar'"
         [ngStyle]="{'width': (progress_funding) + '%', transition: transition}"
@@ -101,7 +101,7 @@
         [attr.aria-valuenow]="value"
         [attr.aria-valuetext]="(progress_funding).toFixed(0) + '%'"
         attr.aria-valuemax="100"
-        >{{progress_funding}}% of funding met
+        >{{progress_funding}}% of max attendees
           <ng-content></ng-content>
       </div>
     </div>
@@ -118,7 +118,7 @@
         [attr.aria-valuenow]="value"
         [attr.aria-valuetext]="(progress_donation).toFixed(0) + '%'"
         attr.aria-valuemax="100"
-        >{{progress_donation}}% of donations met 
+        >{{progress_donation}}% of donations met
           <ng-content></ng-content>
       </div>
     </div>

@@ -10,7 +10,7 @@
 
 <h1 class="trendingHeader">Trending</h1>
 <div class="grid grid-pad">
-  <div *ngFor="let project of projects.slice(0,3)" [routerLink]="['/detail', project.id]" class="col-1-4">
+  <div *ngFor="let project of projects.slice(0,6)" [routerLink]="['/detail', project.id]" class="col-1-4">
     <div class="inner" id={{project.id}}>
       <img src="{{project.thumbnail}}">
       <h2>{{project.title}}</h2><br>
