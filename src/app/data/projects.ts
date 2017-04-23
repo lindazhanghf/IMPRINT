@@ -67,7 +67,16 @@ const hike_required_resources: Resource[] = [
         current_number: 18,
         contributions: []
     },
-
+]
+const workshop_required_resources: Resource[] = [
+    {
+        id: 0,
+        type: "funding",
+        name: "Attandant",
+        ideal_number: 20,
+        current_number: 10,
+        contributions: []
+    },
 ]
 
 export const PROJECTS: Project[] = [
@@ -176,6 +185,46 @@ export const PROJECTS: Project[] = [
     thumbnail: `./../../assets/thumbnails/hike.jpg`,
     resources_deadline: ``,
     resources: hike_required_resources
-  }
+  },
+  {
+    id: 5,
+    title: `Women's March`,
+    userID: 0,
+    userName: 'Jane Doe',
+    description: `Hi all, I'm looking for people to go to the Women's March with! Please
+    try to be here by 10:50 AM. If you have any questions, please reach out to me at
+    janedoe3710@gmail.com. Please spread the word!`,
+    date: `Monday, May 15th, 2017`,
+    timeOfEvent: '11:00 am - 2:00 pm',
+    timeLeft: 14,
+    category: 2,
+    tag: 'Park, Environment',
+    media: ``,
+    neighborhood: 0,
+    locationName: 'City Hall',
+    address: "400 Park Dr NE, 14th Street",
+    thumbnail: `./../../assets/thumbnails/womens_march.png`,
+    resources_deadline: ``,
+    resources: womens_march_required_resources
+  },
+  {
+    id: 6,
+    title: `Career Building Workshop`,
+    userID: 0,
+    userName: 'Pam Locke',
+    description: `Hey all! This worked is geared for students in the computing and design `,
+    date: `Thursday, May 18th, 2017`,
+    timeOfEvent: '11:00 am - 1:00 pm',
+    timeLeft: 6,
+    category: 2,
+    tag: 'Workshop, Career',
+    media: ``,
+    neighborhood: 0,
+    locationName: 'City Hall',
+    address: "400 Park Dr NE, 14th Street",
+    thumbnail: `./../../assets/thumbnails/laptop.jpg`,
+    resources_deadline: ``,
+    resources: workshop_required_resources
+  },
 ];
 
