@@ -42,7 +42,7 @@
     </div>
     <button id="helpButton" [disabled]="!needed_funding" (click)="helpOut('funding')" style="margin-left: 2px; float:right; color:#fff; font-family:'whitneyHTF-medium'; padding:15px; padding-left:20px; padding-right:20px;" class="helpButton">HELP OUT</button>
   </div>
-  <span style="margin-left:10px;">{{needed_funding}} more fundings needed!</span>
+  <span style="margin-left:10px;">{{needed_funding}} more attendees until max count reached!</span>
  </div>
 
  <div *ngIf="(needed_donation)||(progress_donation==100)" >
