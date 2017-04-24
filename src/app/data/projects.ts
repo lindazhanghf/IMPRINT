@@ -151,7 +151,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 4,
-    title: `Hiking at Stone Mountain`,
+    title: `Hiking at Stone Mt.`,
     userID: 0,
     userName: 'John Adams',
     description: `Hi everyone! I just moved to the city and was looking to meet some people in the area. Looking forward to meeting everyone at the hike!`,
@@ -170,7 +170,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 5,
-    title: `Career Building Workshop`,
+    title: `Career Workshop`,
     userID: 0,
     userName: 'Pam Locke',
     description: `Hey all! This worked is geared for students in the computing and design `,
