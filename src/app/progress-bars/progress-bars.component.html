@@ -19,7 +19,7 @@
     </div>
     <button [disabled]="!needed_volunteer" (click)="helpOut('volunteer')" style="margin-left: 2px; float:right; background-color:#000; color:#fff; font-family:'whitneyHTF-medium'; padding:15px; padding-left:20px; padding-right:20px;" class="helpButton">HELP OUT</button>
   </div>
-  <span>{{needed_volunteer}} more volunteer(s) needed!</span>
+  <span style="margin-left:10px;">{{needed_volunteer}} more volunteer(s) needed!</span>
  </div>
 
  <div *ngIf="(needed_funding)||(progress_funding==100)" >
@@ -42,7 +42,7 @@
     </div>
     <button [disabled]="!needed_funding" (click)="helpOut('funding')" style="margin-left: 2px; float:right; background-color:#000; color:#fff; font-family:'whitneyHTF-medium'; padding:15px; padding-left:20px; padding-right:20px;" class="helpButton">HELP OUT</button>
   </div>
-  <span>{{needed_funding}} more fundings needed!</span>
+  <span style="margin-left:10px;">{{needed_funding}} more fundings needed!</span>
  </div>
 
  <div *ngIf="(needed_donation)||(progress_donation==100)" >
@@ -65,7 +65,7 @@
     </div>
     <button [disabled]="!needed_donation" (click)="helpOut('donation')" style="margin-left: 2px; float:right; background-color:#000; color:#fff; font-family:'whitneyHTF-medium'; padding:15px; padding-left:20px; padding-right:20px;" class="helpButton">HELP OUT</button>
   </div>
-  <span>{{needed_donation}} more donations needed!</span>
+  <span style="margin-left:10px;">{{needed_donation}} more donations needed!</span>
  </div>
 
 </div> <!-- *ngIf="isDetail" -->

@@ -106,6 +106,25 @@ const tasteofatl_required_resources: Resource[] = [
         contributions: []
     },
 ]
+const soupkitchen_required_resources: Resource[] = [
+    {
+        id: 0,
+        type: "volunteer",
+        name: "Attandant",
+        ideal_number: 200,
+        current_number: 148,
+        contributions: []
+    },
+    {
+        id: 0,
+        type: "donation",
+        name: "Attandant",
+        ideal_number: 400,
+        current_number: 382,
+        contributions: []
+    },
+
+]
 
 export const PROJECTS: Project[] = [
   {
@@ -216,27 +235,6 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 5,
-    title: `Women's March`,
-    userID: 0,
-    userName: 'Jane Doe',
-    description: `Hi all, I'm looking for people to go to the Women's March with! Please
-    try to be here by 10:50 AM. If you have any questions, please reach out to me at
-    janedoe3710@gmail.com. Please spread the word!`,
-    date: `Monday, May 15th, 2017`,
-    timeOfEvent: '11:00 am - 2:00 pm',
-    timeLeft: 14,
-    category: 2,
-    tag: 'Park, Environment',
-    media: ``,
-    neighborhood: 0,
-    locationName: 'City Hall',
-    address: "400 Park Dr NE, 14th Street",
-    thumbnail: `./../../assets/thumbnails/womens_march.png`,
-    resources_deadline: ``,
-    resources: womens_march_required_resources
-  },
-  {
-    id: 6,
     title: `Career Building Workshop`,
     userID: 0,
     userName: 'Pam Locke',
@@ -255,7 +253,7 @@ export const PROJECTS: Project[] = [
     resources: workshop_required_resources
   },
     {
-    id: 7,
+    id: 6,
     title: `Town Hall Meeting`,
     userID: 0,
     userName: 'Pam Locke',
@@ -272,6 +270,26 @@ export const PROJECTS: Project[] = [
     thumbnail: `./../../assets/thumbnails/cityhall.jpg`,
     resources_deadline: ``,
     resources: cityhall_required_resources
+  },
+    {
+    id: 7,
+    title: `Soup Kitchen`,
+    userID: 0,
+    userName: 'Burt Marlowe',
+    description: `Support the community by volunteering to help serve food to the
+    homeless! `,
+    date: `Saturday, April 28th, 2017`,
+    timeOfEvent: '9:00 am - 12:00 pm',
+    timeLeft: 29,
+    category: 2,
+    tag: 'Food, Community',
+    media: ``,
+    neighborhood: 0,
+    locationName: 'Atlanta Community Food Bank',
+    address: "732 Joseph E Lowery Blvd NW",
+    thumbnail: `./../../assets/thumbnails/soupkitchen.jpg`,
+    resources_deadline: ``,
+    resources: soupkitchen_required_resources
   },
   {
     id: 8,
@@ -291,6 +309,27 @@ export const PROJECTS: Project[] = [
     thumbnail: `./../../assets/thumbnails/tasteofatl.jpg`,
     resources_deadline: ``,
     resources: tasteofatl_required_resources
-  }
+  },
+    {
+    id: 9,
+    title: `Women's March`,
+    userID: 0,
+    userName: 'Jane Doe',
+    description: `Hi all, I'm looking for people to go to the Women's March with! Please
+    try to be here by 10:50 AM. If you have any questions, please reach out to me at
+    janedoe3710@gmail.com. Please spread the word!`,
+    date: `Monday, May 15th, 2017`,
+    timeOfEvent: '11:00 am - 2:00 pm',
+    timeLeft: 14,
+    category: 2,
+    tag: 'Park, Environment',
+    media: ``,
+    neighborhood: 0,
+    locationName: 'City Hall',
+    address: "400 Park Dr NE, 14th Street",
+    thumbnail: `./../../assets/thumbnails/womens_march.png`,
+    resources_deadline: ``,
+    resources: womens_march_required_resources
+  },
 ];
 

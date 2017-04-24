@@ -1,10 +1,10 @@
 <nav>
-    <a routerLink="/home" routerLinkActive="active" class="logo">IMPRINT</a>
+    <a routerLink="/home" routerLinkActive="active" class="logo" id="logo">IMPRINT</a>
     <input type="text" name="projectSearch" placeholder="Search for a project or event...">
-    <a routerLink="/explore" routerLinkActive="active">Explore Projects</a>
-    <a routerLink="/create" routerLinkActive="active">Create a Project</a>
-    <a routerLink="/about" routerLinkActive="active">About</a>
-    <a  *ngIf="!user_service.current_user" routerLink="/registration" routerLinkActive="active">Sign Up/Log In</a>
+    <a id="explorePrj" routerLink="/explore" routerLinkActive="active">Explore Projects</a>
+    <a id="createPrj" routerLink="/create" routerLinkActive="active">Create a Project</a>
+    <a id="aboutNav" routerLink="/about" routerLinkActive="active">About</a>
+    <a id="signUpNav" *ngIf="!user_service.current_user" routerLink="/registration" routerLinkActive="active">Sign Up/Log In</a>
     <a *ngIf="user_service.current_user" >
         <img border="0" src="{{user_service.current_user.profile_pic}}" width="20" height="20">
     </a>

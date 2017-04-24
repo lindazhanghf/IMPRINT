@@ -360,5 +360,49 @@ div.dropdown button, div.saveDiv.button.saveAndContinue p{
 }
 div.progress-bars p {
   text-align: center;
-
+}
+@media (min-width: 320px) {
+  #explorePrj, #createPrj, #aboutNav, #signUpNav {
+      display: none;
+  }
+  nav input[name="projectSearch"] {
+    display: none;
+  }
+  div.col-1-4[_ngcontent-c1] {
+    width: 100%;
+  }
+/*  .searchBar {
+    width: 100%;
+  }*/
+  nav {
+    width: 150%;
+  }
+}
+@media (min-width: 550px) {
+  nav input[name="projectSearch"] {
+    display: inline-block;
+  }
+}
+@media (min-width: 660px) {
+  #explorePrj {
+    display: inline-block;
+  }
+}
+@media (min-width: 775px) {
+  #createPrj {
+    display: inline-block;
+  }
+}
+@media (min-width: 835px) {
+  #aboutNav {
+    display: inline-block;
+  }
+  div.col-1-4[_ngcontent-c1] {
+    width: 33.33%;
+  }
+}
+@media (min-width: 950px) {
+  #signUpNav {
+    display: inline-block;
+  }
 }
