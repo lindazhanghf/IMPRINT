@@ -123,17 +123,17 @@ div.col-lg-4 {
 }
 .col-lg-4 input[name="projectSearch2"] {
     margin-left: 15px;
-    width: 475px;
+    width: 42.5%;
     font-family: 'whitneyHTF-light';
 }
 .col-lg-4 input[name="neighSearch"] {
-    width: 225px;
+    width: 22%;
 }
 .col-lg-4 input[name="dateSearch"] {
-    width: 185px;
+    width: 16%;
 }
 .col-lg-4 button {
-    width: 175px;
+    width: 10%;
     margin-right: 15px;
     background-color: #000000;
     color: #fff;
@@ -146,9 +146,6 @@ div.col-lg-4 {
     margin-top: 50px;
     margin-left: 20px;
     font-family: "whitneyHTF-medium";
-}
-h1.trendingHeader {
-  margin-top: 150px;
 }
 .grid .grid-pad {
     text-align: center;
@@ -332,7 +329,7 @@ div.topGrid select {
    font-family: 'whitneyHTF-medium';
    vertical-align: center;
 }
-div.signUp button, button, div.button, button.helpButton {
+div.signUp button, button, div.button, button.helpButton, #helpButton {
   background-color: #000;
   font-family: 'whitneyHTF-light';
   font-size: 15px;
@@ -371,11 +368,14 @@ div.progress-bars p {
   div.col-1-4[_ngcontent-c1] {
     width: 100%;
   }
-/*  .searchBar {
-    width: 100%;
-  }*/
   nav {
     width: 150%;
+  }
+  #searchBar, #motto {
+    display: none;
+  }
+  h1.trendingHeader {
+    margin-top: 15px;
   }
 }
 @media (min-width: 550px) {
@@ -397,12 +397,22 @@ div.progress-bars p {
   #aboutNav {
     display: inline-block;
   }
-  div.col-1-4[_ngcontent-c1] {
-    width: 33.33%;
+  h1.trendingHeader {
+  margin-top: 150px;
+  }
+  #motto {
+    display: block;
+  }
+  #searchBar {
+    display: block;
+    width: 85%;
   }
 }
 @media (min-width: 950px) {
   #signUpNav {
     display: inline-block;
   }
+}
+button:disabled, button[disabled], #helpButton:disabled, #helpButton[disabled] {
+  background-color: #C4C9C4;
 }
