@@ -329,7 +329,7 @@ div.topGrid select {
    font-family: 'whitneyHTF-medium';
    vertical-align: center;
 }
-div.signUp button, button, div.button, button.helpButton {
+div.signUp button, button, div.button, button.helpButton, #helpButton {
   background-color: #000;
   font-family: 'whitneyHTF-light';
   font-size: 15px;
@@ -413,5 +413,6 @@ div.progress-bars p {
     display: inline-block;
   }
 }
-@media (min-width: 950px) {
+button:disabled, button[disabled], #helpButton:disabled, #helpButton[disabled] {
+  background-color: #C4C9C4;
 }
