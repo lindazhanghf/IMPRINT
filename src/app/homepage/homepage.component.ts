@@ -20,7 +20,7 @@ export class HomepageComponent implements OnInit {
 
   getProjects(): void {
     this.projectService.getProjects().then(projects => {
-        this.projects = projects.slice(1, 5);
+        this.projects = projects;
         // this.projects.forEach(function(project){
         //   this.projectService.calculateProgress(project.id);
         // });
